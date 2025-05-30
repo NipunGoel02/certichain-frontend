@@ -59,9 +59,9 @@ We built **CertiChain** to tackle this head-on using:
 - Node.js + Express.js  
 - MongoDB for Data Storage  
 - JWT for Auth  
-- Google Gemini / ML Model for Cheating Detection  
+- ML Model for Cheating Detection  
 - Solidity Smart Contracts (NFT Minting)  
-- Pinata / IPFS for NFT Metadata Hosting  
+- Pinata / IPFS for NFT Metadata Hosting 
 
 ---
 
