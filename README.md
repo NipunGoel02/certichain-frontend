@@ -9,7 +9,7 @@
 ## 🌐 Live Project Links
 
 - 🌐 **GitHub Repository**: [https://github.com/NipunGoel02/CertiChain](https://github.com/NipunGoel02/CertiChain)
-- 📊 **Project PPT + Video**: [https://drive.google.com/file/d/1w8VLQ-PPT-DEMO-LINK](https://drive.google.com/file/d/1B55GfWNC6QpMqnYgPGkVD3Jkd2sOqnIf/view?usp=sharing)
+- 📊 **Project PPT + Video**: [https://drive.google.com/file/d/1w8VLQ-PPT-DEMO-LINK](https://drive.google.com/file/d/1r98j9cw6HCF9w3NhAHZBundhUxfXwhyk/view?usp=sharing)
 - 📸 **Screenshots**: *(Scroll down ⬇️)*
 
 ---
@@ -69,12 +69,13 @@ We built **CertiChain** to tackle this head-on using:
 ![Logo](./public/CertiChain.png)
 
 ### Course Preview
-![Course Preview](./public/heeee.jpeg)
+![Course Preview](./public/harshit.jpeg)
 
-### Hackathon Certificates
-![Hackathon Certificates](./public/th.jpeg)
+### Hackathon Preview
+![Hackathon Certificates](./public/harshit2.jpeg)
 
-
+### Nft metamask certificate claming
+![ Certificates](./public/harshit3.jpeg)
 
 ## Run Instructions
 
