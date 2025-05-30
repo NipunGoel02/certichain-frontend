@@ -69,13 +69,13 @@ We built **CertiChain** to tackle this head-on using:
 ![Logo](./public/CertiChain.png)
 
 ### Course Preview
-![Course Preview](./public/harshit.jpeg)
+![Course Preview](./public/harshit.png)
 
 ### Hackathon Preview
-![Hackathon Certificates](./public/harshit2.jpeg)
+![Hackathon Certificates](./public/harshit2.png)
 
 ### Nft metamask certificate claming
-![ Certificates](./public/harshit3.jpeg)
+![ Certificates](./public/harshit3.png)
 
 ## Run Instructions
 
