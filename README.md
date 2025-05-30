@@ -9,8 +9,8 @@
 ## 🌐 Live Project Links
 
 - 🌐 **GitHub Repository**: [https://github.com/NipunGoel02/CertiChain](https://github.com/NipunGoel02/CertiChain)
-- 📊 **CertiChain Video**: [https://drive.google.com/file/d/1w8VLQ-PPT-DEMO-LINK](https://drive.google.com/file/d/1r98j9cw6HCF9w3NhAHZBundhUxfXwhyk/view?usp=sharing)
-- 📊 **CertiChain PPT**: [https://drive.google.com/file/d/1w8VLQ-PPT-DEMO-LINK](https://docs.google.com/presentation/d/1XhZ8kxo-uVR6AEMpQoq8JctSomePAMua/edit?usp=drive_link&ouid=114353394139491100644&rtpof=true&sd=true)
+- 📊 **CertiChain Video**: [https://drive.google.com/file/d/1w8VLQ-VIDEO-LINK](https://drive.google.com/file/d/1r98j9cw6HCF9w3NhAHZBundhUxfXwhyk/view?usp=sharing)
+- 📊 **CertiChain PPT**: [https://drive.google.com/file/d/1w8VLQ-PPT-LINK](https://docs.google.com/presentation/d/1XhZ8kxo-uVR6AEMpQoq8JctSomePAMua/edit?usp=drive_link&ouid=114353394139491100644&rtpof=true&sd=true)
 - 📸 **Screenshots**: *(Scroll down ⬇️)*
 
 ---
