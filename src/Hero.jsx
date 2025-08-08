@@ -140,7 +140,7 @@ const HeroSection = () => {
         muted
         playsInline
         className="absolute inset-0 w-screen  h-full object-cover"
-        src="hero-videoss.mp4"
+        src="ss.mp4"
         onError={(e) => { e.target.style.display='none'; console.error("Video failed to load.") }}
       />
 
