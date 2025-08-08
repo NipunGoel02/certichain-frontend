@@ -246,7 +246,7 @@ const Quiz = () => {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center pt-20">
         <div className="text-center">
-          <div className="w-16 h-16 border-4 border-teal-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+          <div className="w-16 h-16 border-4 border-purple-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
           <p className="text-gray-600">Loading quiz questions...</p>
         </div>
       </div>
@@ -264,7 +264,7 @@ const Quiz = () => {
           <p className="text-gray-600 mb-6">{error}</p>
           <button 
             onClick={() => navigate(`/courses/${courseId}`)}
-            className="inline-block px-6 py-3 bg-teal-500 text-white font-medium rounded-lg hover:bg-teal-600 transition-colors duration-300"
+            className="inline-block px-6 py-3 bg-purple-500 text-white font-medium rounded-lg hover:bg-purple-600 transition-colors duration-300"
           >
             Return to Course
           </button>
@@ -286,7 +286,7 @@ const Quiz = () => {
           <p className="text-gray-700 mb-6">You have already completed this course and claimed your certificate.</p>
           <button
             onClick={() => navigate(`/courses/${courseId}`)}
-            className="px-6 py-3 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition-colors"
+            className="px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors"
           >
             Return to Course
           </button>
@@ -306,7 +306,7 @@ const Quiz = () => {
           <p className="text-gray-600 mb-6">This course doesn't have any quiz questions yet.</p>
           <button 
             onClick={() => navigate(`/courses/${courseId}`)}
-            className="inline-block px-6 py-3 bg-teal-500 text-white font-medium rounded-lg hover:bg-teal-600 transition-colors duration-300"
+            className="inline-block px-6 py-3 bg-purple-500 text-white font-medium rounded-lg hover:bg-purple-600 transition-colors duration-300"
           >
             Return to Course
           </button>
@@ -373,7 +373,7 @@ const Quiz = () => {
             {passed && (
               <button
                 onClick={handleClaimCertificate}
-                className="px-6 py-3 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition-colors"
+                className="px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors"
                 disabled={markingCompleted || cheatWarning}
               >
                 {markingCompleted ? "Marking Completed..." : "Claim Your Certificate"}
@@ -418,7 +418,7 @@ const Quiz = () => {
           </div>
           <div className="w-full bg-gray-200 rounded-full h-2.5">
             <motion.div 
-              className="bg-teal-600 h-2.5 rounded-full"
+              className="bg-purple-600 h-2.5 rounded-full"
               initial={{ width: 0 }}
               animate={{ width: `${progress}%` }}
               transition={{ duration: 0.5 }}
@@ -438,9 +438,9 @@ const Quiz = () => {
                 onClick={() => handleJumpToQuestion(index)}
                 className={`h-8 w-8 rounded-full flex items-center justify-center text-sm font-medium transition-colors ${
                   currentQuestion === index
-                    ? 'bg-teal-600 text-white' 
+                    ? 'bg-purple-600 text-white' 
                     : answers[index] !== null
-                      ? 'bg-teal-100 text-teal-800 border border-teal-300'
+                      ? 'bg-purple-100 text-purple-800 border border-purple-300'
                       : 'bg-white text-gray-700 border border-gray-300'
                 }`}
               >
@@ -465,14 +465,14 @@ const Quiz = () => {
                   onClick={() => handleAnswer(option)}
                   className={`w-full text-left p-4 border rounded-lg transition-all ${
                     answers[currentQuestion] === option 
-                      ? 'bg-teal-50 border-teal-500 shadow-md' 
+                      ? 'bg-purple-50 border-purple-500 shadow-md' 
                       : 'hover:bg-gray-50 hover:border-gray-300'
                   }`}
                 >
                   <div className="flex items-center">
                     <div className={`h-6 w-6 rounded-full flex items-center justify-center mr-3 ${
                       answers[currentQuestion] === option 
-                        ? 'bg-teal-500 text-white' 
+                        ? 'bg-purple-500 text-white' 
                         : 'bg-gray-200 text-gray-600'
                     }`}>
                       {String.fromCharCode(65 + index)}
@@ -496,7 +496,7 @@ const Quiz = () => {
               <button
                 onClick={handleNext}
                 disabled={answers[currentQuestion] === null}
-                className="px-6 py-2 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center"
+                className="px-6 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center"
               >
                 {currentQuestion === questions.length - 1 ? 'Submit Quiz' : 'Next'}
                 <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">

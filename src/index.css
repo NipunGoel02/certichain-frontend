@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply bg-background text-gray-800 font-sans;
+    @apply  text-gray-800 font-sans;
   }
   
   h1 {
@@ -30,7 +30,9 @@
 
 @layer components {
   .btn-primary {
-    @apply bg-gradient-to-r from-primary-500 to-primary-600 text-white px-6 py-3 rounded-xl shadow-button hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1;
+    @apply text-white px-6 py-3 rounded-xl shadow-button hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1;
+    background-color: rgba(167,117,229,1) !important;
+    background-image: none !important;
   }
   
   .btn-secondary {

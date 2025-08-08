@@ -41,7 +41,7 @@ const AdminCourses = () => {
     <div className="container mx-auto p-6">
       <div className="flex justify-between items-center mb-6">
         <h1 className="text-2xl font-bold">Manage Your Courses</h1>
-        <Link to="/admin/courses/new" className="bg-teal-600 text-white px-4 py-2 rounded">
+        <Link to="/admin/courses/new" className="bg-purple-600 text-white px-4 py-2 rounded">
           Add New Course
         </Link>
       </div>

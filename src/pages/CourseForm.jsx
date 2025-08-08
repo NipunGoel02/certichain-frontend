@@ -220,8 +220,8 @@ export default function CourseForm() {
               key={i}
               onClick={() => setStep(i + 1)}
               className={`w-10 h-10 rounded-full flex items-center justify-center ${
-                step > i ? 'bg-teal-600 text-white' :
-                step === i + 1 ? 'border-2 border-teal-600 text-teal-600' :
+                step > i ? 'bg-purple-600 text-white' :
+                step === i + 1 ? 'border-2 border-purple-600 text-purple-600' :
                 'bg-gray-200 text-gray-600'
               } transition-all duration-300`}
             >
@@ -231,7 +231,7 @@ export default function CourseForm() {
         </div>
         <div className="w-full bg-gray-200 rounded-full h-2">
           <motion.div
-            className="bg-teal-600 h-2 rounded-full"
+            className="bg-purple-600 h-2 rounded-full"
             initial={{ width: 0 }}
             animate={{ width: `${(step / totalSteps) * 100}%` }}
             transition={{ duration: 0.5 }}
@@ -273,7 +273,7 @@ export default function CourseForm() {
                       type="text"
                       value={course.title}
                       onChange={(e) => setCourse({ ...course, title: e.target.value })}
-                      className="w-full p-2 border rounded focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all"
+                      className="w-full p-2 border rounded focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
                       required
                     />
                   </motion.div>
@@ -286,7 +286,7 @@ export default function CourseForm() {
                     <textarea
                       value={course.description}
                       onChange={(e) => setCourse({ ...course, description: e.target.value })}
-                      className="w-full p-2 border rounded focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all"
+                      className="w-full p-2 border rounded focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
                       rows={3}
                       required
                     />
@@ -300,7 +300,7 @@ export default function CourseForm() {
                     <textarea
                       value={course.longDescription}
                       onChange={(e) => setCourse({ ...course, longDescription: e.target.value })}
-                      className="w-full p-2 border rounded focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all"
+                      className="w-full p-2 border rounded focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
                       rows={4}
                     />
                   </motion.div>
@@ -345,7 +345,7 @@ export default function CourseForm() {
                           }
                         }
                       }}
-                      className="w-full p-2 border rounded focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all"
+                      className="w-full p-2 border rounded focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
                     />
                     {course.thumbnail && (
                       <img
@@ -365,7 +365,7 @@ export default function CourseForm() {
                       type="text"
                       value={course.duration}
                       onChange={(e) => setCourse({ ...course, duration: e.target.value })}
-                      className="w-full p-2 border rounded focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all"
+                      className="w-full p-2 border rounded focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
                     />
                   </motion.div>
                   <motion.div
@@ -377,7 +377,7 @@ export default function CourseForm() {
                     <select
                       value={course.level}
                       onChange={(e) => setCourse({ ...course, level: e.target.value })}
-                      className="w-full p-2 border rounded focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all"
+                      className="w-full p-2 border rounded focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
                     >
                       <option value="Beginner">Beginner</option>
                       <option value="Intermediate">Intermediate</option>
@@ -394,7 +394,7 @@ export default function CourseForm() {
   <select
     value={course.category}
     onChange={(e) => setCourse({ ...course, category: e.target.value })}
-    className="w-full p-2 border rounded focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all"
+    className="w-full p-2 border rounded focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
     required
   >
     <option value="">Select Category</option>
@@ -417,7 +417,7 @@ export default function CourseForm() {
                       type="number"
                       value={course.price}
                       onChange={(e) => setCourse({ ...course, price: Number(e.target.value) })}
-                      className="w-full p-2 border rounded focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all"
+                      className="w-full p-2 border rounded focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
                       min={0}
                     />
                   </motion.div>
@@ -431,7 +431,7 @@ export default function CourseForm() {
                       type="number"
                       value={course.lessonCount}
                       onChange={(e) => setCourse({ ...course, lessonCount: Number(e.target.value) })}
-                      className="w-full p-2 border rounded focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all"
+                      className="w-full p-2 border rounded focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
                       min={0}
                     />
                   </motion.div>
@@ -457,7 +457,7 @@ export default function CourseForm() {
                           instructor: { ...course.instructor, name: e.target.value }
                         })
                       }
-                      className="w-full p-2 border rounded focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all"
+                      className="w-full p-2 border rounded focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
                       required
                     />
                   </motion.div>
@@ -476,7 +476,7 @@ export default function CourseForm() {
                           instructor: { ...course.instructor, title: e.target.value }
                         })
                       }
-                      className="w-full p-2 border rounded focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all"
+                      className="w-full p-2 border rounded focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
                     />
                   </motion.div>
                   <motion.div
@@ -493,7 +493,7 @@ export default function CourseForm() {
                           instructor: { ...course.instructor, bio: e.target.value }
                         })
                       }
-                      className="w-full p-2 border rounded focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all"
+                      className="w-full p-2 border rounded focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
                       rows={4}
                     />
                   </motion.div>
@@ -544,7 +544,7 @@ export default function CourseForm() {
                           }
                         }
                       }}
-                      className="w-full p-2 border rounded focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all"
+                      className="w-full p-2 border rounded focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
                     />
                     {course.instructor.avatar && (
                       <img
@@ -568,14 +568,14 @@ export default function CourseForm() {
                         value={section.title}
                         onChange={(e) => handleSectionChange(sectionIndex, 'title', e.target.value)}
                         placeholder="Section Title"
-                        className="w-2/3 p-2 border rounded focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all"
+                        className="w-2/3 p-2 border rounded focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
                       />
                       <input
                         type="text"
                         value={section.duration}
                         onChange={(e) => handleSectionChange(sectionIndex, 'duration', e.target.value)}
                         placeholder="Duration"
-                        className="w-1/3 p-2 border rounded focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all"
+                        className="w-1/3 p-2 border rounded focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
                       />
                       <button
                         type="button"
@@ -595,14 +595,14 @@ export default function CourseForm() {
                               handleLessonChange(sectionIndex, lessonIndex, 'title', e.target.value)
                             }
                             placeholder="Lesson Title"
-                            className="w-2/5 p-2 border rounded focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all"
+                            className="w-2/5 p-2 border rounded focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
                           />
                           <select
                             value={lesson.type}
                             onChange={(e) =>
                               handleLessonChange(sectionIndex, lessonIndex, 'type', e.target.value)
                             }
-                            className="w-1/5 p-2 border rounded focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all"
+                            className="w-1/5 p-2 border rounded focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
                           >
                             <option value="video">Video</option>
                             <option value="quiz">Quiz</option>
@@ -615,7 +615,7 @@ export default function CourseForm() {
                               handleLessonChange(sectionIndex, lessonIndex, 'duration', e.target.value)
                             }
                             placeholder="Duration"
-                            className="w-1/5 p-2 border rounded focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all"
+                            className="w-1/5 p-2 border rounded focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
                           />
                           <button
                             type="button"
@@ -631,7 +631,7 @@ export default function CourseForm() {
                             handleLessonChange(sectionIndex, lessonIndex, 'content', e.target.value)
                           }
                           placeholder="Lesson Content"
-                          className="w-full p-2 border rounded focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all"
+                          className="w-full p-2 border rounded focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
                           rows={3}
                         />
                       </div>
@@ -639,7 +639,7 @@ export default function CourseForm() {
                     <button
                       type="button"
                       onClick={() => addLesson(sectionIndex)}
-                      className="px-4 py-2 bg-teal-600 text-white rounded hover:bg-teal-700 transition-colors"
+                      className="px-4 py-2 bg-purple-600 text-white rounded hover:bg-purple-700 transition-colors"
                     >
                       Add Lesson
                     </button>
@@ -648,7 +648,7 @@ export default function CourseForm() {
                 <button
                   type="button"
                   onClick={addSection}
-                  className="px-6 py-2 bg-teal-600 text-white rounded hover:bg-teal-700 transition-colors"
+                  className="px-6 py-2 bg-purple-600 text-white rounded hover:bg-purple-700 transition-colors"
                 >
                   Add Section
                 </button>
@@ -665,7 +665,7 @@ export default function CourseForm() {
                         type="text"
                         value={outcome}
                         onChange={(e) => handleOutcomeChange(index, e.target.value)}
-                        className="flex-grow p-2 border rounded focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all"
+                        className="flex-grow p-2 border rounded focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
                       />
                       <button
                         type="button"
@@ -679,7 +679,7 @@ export default function CourseForm() {
                   <button
                     type="button"
                     onClick={addOutcome}
-                    className="px-4 py-2 bg-teal-600 text-white rounded hover:bg-teal-700 transition-colors"
+                    className="px-4 py-2 bg-purple-600 text-white rounded hover:bg-purple-700 transition-colors"
                   >
                     Add Outcome
                   </button>
@@ -692,7 +692,7 @@ export default function CourseForm() {
                         type="text"
                         value={requirement}
                         onChange={(e) => handleRequirementChange(index, e.target.value)}
-                        className="flex-grow p-2 border rounded focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all"
+                        className="flex-grow p-2 border rounded focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
                       />
                       <button
                         type="button"
@@ -706,7 +706,7 @@ export default function CourseForm() {
                   <button
                     type="button"
                     onClick={addRequirement}
-                    className="px-4 py-2 bg-teal-600 text-white rounded hover:bg-teal-700 transition-colors"
+                    className="px-4 py-2 bg-purple-600 text-white rounded hover:bg-purple-700 transition-colors"
                   >
                     Add Requirement
                   </button>
@@ -723,7 +723,7 @@ export default function CourseForm() {
                       type="text"
                       value={question.question}
                       onChange={(e) => handleQuizQuestionChange(index, 'question', e.target.value)}
-                      className="w-full p-2 border rounded focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all"
+                      className="w-full p-2 border rounded focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
                       required
                     />
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
@@ -735,7 +735,7 @@ export default function CourseForm() {
                           onChange={(e) =>
                             handleQuizQuestionChange(index, `option${optIndex}`, e.target.value)
                           }
-                          className="p-2 border rounded focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all"
+                          className="p-2 border rounded focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
                           placeholder={`Option ${optIndex + 1}`}
                           required
                         />
@@ -745,7 +745,7 @@ export default function CourseForm() {
                     <select
                       value={question.correctAnswer}
                       onChange={(e) => handleQuizQuestionChange(index, 'correctAnswer', e.target.value)}
-                      className="w-full p-2 border rounded focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all"
+                      className="w-full p-2 border rounded focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
                     >
                       {question.options.map((_, optIndex) => (
                         <option key={optIndex} value={optIndex}>
@@ -765,7 +765,7 @@ export default function CourseForm() {
                 <button
                   type="button"
                   onClick={addQuizQuestion}
-                  className="px-6 py-2 bg-teal-600 text-white rounded hover:bg-teal-700 transition-colors"
+                  className="px-6 py-2 bg-purple-600 text-white rounded hover:bg-purple-700 transition-colors"
                 >
                   Add Question
                 </button>
@@ -799,7 +799,7 @@ export default function CourseForm() {
                 nextStep();
               }
             }}
-            className="px-6 py-2 bg-teal-600 text-white rounded hover:bg-teal-700 flex items-center transition-all"
+            className="px-6 py-2 bg-purple-600 text-white rounded hover:bg-purple-700 flex items-center transition-all"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >

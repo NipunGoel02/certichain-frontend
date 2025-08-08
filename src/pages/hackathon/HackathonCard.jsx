@@ -7,9 +7,9 @@ const HackathonCard = ({ hackathon }) => {
   const getStatusColor = (status) => {
     switch (status) {
       case 'upcoming': return 'bg-yellow-100 text-yellow-800 border-yellow-200';
-      case 'active': return 'bg-teal-100 text-teal-800 border-teal-200';
+      case 'active': return 'bg-purple-100 text-purple-800 border-purple-200';
       case 'completed': return 'bg-gray-100 text-gray-800 border-gray-200';
-      default: return 'bg-teal-100 text-teal-800 border-teal-200';
+      default: return 'bg-purple-100 text-purple-800 border-purple-200';
     }
   };
 
@@ -28,7 +28,7 @@ const HackathonCard = ({ hackathon }) => {
       variants={item}
       className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1"
     >
-      <div className="h-48 bg-gradient-to-r from-teal-500 to-teal-400 relative overflow-hidden">
+      <div className="h-48 bg-gradient-to-r from-purple-500 to-purple-400 relative overflow-hidden">
         {hackathon.banner ? (
           <img src={hackathon.banner} alt={hackathon.title} className="w-full h-full object-cover" />
         ) : (
@@ -58,7 +58,7 @@ const HackathonCard = ({ hackathon }) => {
         
         <div className="flex flex-col space-y-3 mb-6">
           <div className="flex items-center text-sm text-gray-500">
-            <svg className="w-4 h-4 mr-2 text-teal-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <svg className="w-4 h-4 mr-2 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
             </svg>
             <span>
@@ -67,7 +67,7 @@ const HackathonCard = ({ hackathon }) => {
           </div>
           
           <div className="flex items-center text-sm text-gray-500">
-            <svg className="w-4 h-4 mr-2 text-teal-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <svg className="w-4 h-4 mr-2 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
             </svg>
             <span>{hackathon.participants?.length || 0} Participants</span>
@@ -76,7 +76,7 @@ const HackathonCard = ({ hackathon }) => {
         
         <Link
           to={`/hackathons/${hackathon._id}`}
-          className="block w-full text-center bg-gradient-to-r from-teal-500 to-teal-400 hover:from-teal-600 hover:to-teal-500 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 transform hover:scale-[1.02]"
+          className="block w-full text-center bg-gradient-to-r from-purple-500 to-purple-400 hover:from-purple-600 hover:to-purple-500 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 transform hover:scale-[1.02]"
         >
           View Details
         </Link>

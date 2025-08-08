@@ -64,7 +64,7 @@ const Courses = () => {
   };
 
   return (
-    <div className="min-h-screen pt-24 pb-16">
+    <div className="min-h-screen pt-24 pb-16 rounded-t-[60px]">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
@@ -72,8 +72,15 @@ const Courses = () => {
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
-            <span className="bg-gradient-to-r from-primary-600 to-secondary-500 bg-clip-text text-transparent">
+<h1 className="text-4xl md:text-5xl font-bold mb-4">
+            <span
+              className="bg-clip-text text-transparent"
+              style={{
+                backgroundImage: 'linear-gradient(to right, rgba(167,117,229,1), rgba(167,117,229,1))',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+              }}
+            >
               Explore Courses
             </span>
           </h1>

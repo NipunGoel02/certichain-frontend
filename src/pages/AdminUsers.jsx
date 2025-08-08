@@ -67,7 +67,7 @@ const AdminUsers = () => {
         </table>
       )}
       <div className="mt-4">
-        <Link to="/admin/courses" className="text-teal-600 hover:underline">
+        <Link to="/admin/courses" className="text-purple-600 hover:underline">
           &larr; Back to Courses
         </Link>
       </div>

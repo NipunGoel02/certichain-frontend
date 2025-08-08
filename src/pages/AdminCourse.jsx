@@ -35,7 +35,7 @@ export default function AdminCourses() {
     <div>
       <div className="flex justify-between items-center mb-6">
         <h1 className="text-2xl font-bold">Manage Courses</h1>
-        <Link to="/admin/courses/new" className="bg-teal-600 text-white px-4 py-2 rounded">
+        <Link to="/admin/courses/new" className="bg-purple-600 text-white px-4 py-2 rounded">
           Add New Course
         </Link>
       </div>

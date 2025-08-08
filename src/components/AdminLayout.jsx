@@ -6,15 +6,15 @@ export default function AdminLayout() {
   return (
     <div className="flex min-h-screen">
       {/* Sidebar */}
-      <div className="w-64 bg-gradient-to-b from-teal-700 to-teal-900 p-4">
+      <div className="w-64 bg-gradient-to-b from-purple-700 to-purple-900 p-4">
         <h2 className="text-white text-2xl font-bold mb-8">Admin Panel</h2>
         <nav className="space-y-2">
           <Link
             to="/admin/courses"
             className={`block px-4 py-2 rounded-lg transition-all duration-200 ${
               location.pathname.startsWith('/admin/courses')
-                ? 'bg-teal-800 text-white'
-                : 'text-teal-100 hover:bg-teal-800'
+                ? 'bg-purple-800 text-white'
+                : 'text-purple-100 hover:bg-purple-800'
             }`}
           >
             <div className="flex items-center">
@@ -28,8 +28,8 @@ export default function AdminLayout() {
             to="/admin/users"
             className={`block px-4 py-2 rounded-lg transition-all duration-200 ${
               location.pathname.startsWith('/admin/users')
-                ? 'bg-teal-800 text-white'
-                : 'text-teal-100 hover:bg-teal-800'
+                ? 'bg-purple-800 text-white'
+                : 'text-purple-100 hover:bg-purple-800'
             }`}
           >
             <div className="flex items-center">

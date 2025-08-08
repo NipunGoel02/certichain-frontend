@@ -115,7 +115,7 @@ const CreateHackathon = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-teal-50 to-white">
+    <div className="min-h-screen bg-gradient-to-b from-purple-50 to-white">
       <div className="container mx-auto px-4 py-12">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
@@ -132,7 +132,7 @@ const CreateHackathon = () => {
               <React.Fragment key={step}>
                 <div 
                   className={`w-10 h-10 rounded-full flex items-center justify-center ${
-                    currentStep >= step ? 'bg-teal-500 text-white shadow-md' : 'bg-gray-200 text-gray-600'
+                    currentStep >= step ? 'bg-purple-500 text-white shadow-md' : 'bg-gray-200 text-gray-600'
                   } transition-all duration-300`}
                 >
                   {step}
@@ -140,7 +140,7 @@ const CreateHackathon = () => {
                 {step < 4 && (
                   <div 
                     className={`h-1 w-16 md:w-24 ${
-                      currentStep > step ? 'bg-teal-500' : 'bg-gray-200'
+                      currentStep > step ? 'bg-purple-500' : 'bg-gray-200'
                     } transition-all duration-300`}
                   ></div>
                 )}
@@ -175,7 +175,7 @@ const CreateHackathon = () => {
                   name="title"
                   value={formData.title}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 focus:outline-none transition-all duration-300"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 focus:outline-none transition-all duration-300"
                   required
                 />
               </div>
@@ -187,7 +187,7 @@ const CreateHackathon = () => {
                   value={formData.description}
                   onChange={handleChange}
                   rows="4"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 focus:outline-none transition-all duration-300"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 focus:outline-none transition-all duration-300"
                   required
                 ></textarea>
               </div>
@@ -200,7 +200,7 @@ const CreateHackathon = () => {
                     name="startDate"
                     value={formData.startDate}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 focus:outline-none transition-all duration-300"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 focus:outline-none transition-all duration-300"
                     required
                   />
                 </div>
@@ -212,7 +212,7 @@ const CreateHackathon = () => {
                     name="endDate"
                     value={formData.endDate}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 focus:outline-none transition-all duration-300"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 focus:outline-none transition-all duration-300"
                     required
                   />
                 </div>
@@ -225,7 +225,7 @@ const CreateHackathon = () => {
                   name="submissionDeadline"
                   value={formData.submissionDeadline}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 focus:outline-none transition-all duration-300"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 focus:outline-none transition-all duration-300"
                   required
                 />
               </div>
@@ -240,7 +240,7 @@ const CreateHackathon = () => {
                       value="true"
                       checked={formData.isTeamEvent === true}
                       onChange={() => setFormData({ ...formData, isTeamEvent: true })}
-                      className="form-radio h-5 w-5 text-teal-500"
+                      className="form-radio h-5 w-5 text-purple-500"
                     />
                     <span className="ml-2">Yes</span>
                   </label>
@@ -252,7 +252,7 @@ const CreateHackathon = () => {
                       value="false"
                       checked={formData.isTeamEvent === false}
                       onChange={() => setFormData({ ...formData, isTeamEvent: false })}
-                      className="form-radio h-5 w-5 text-teal-500"
+                      className="form-radio h-5 w-5 text-purple-500"
                     />
                     <span className="ml-2">No</span>
                   </label>
@@ -269,7 +269,7 @@ const CreateHackathon = () => {
                       value={formData.minTeamSize}
                       onChange={handleChange}
                       min="1"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 focus:outline-none transition-all duration-300"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 focus:outline-none transition-all duration-300"
                       required
                     />
                   </div>
@@ -282,7 +282,7 @@ const CreateHackathon = () => {
                       value={formData.maxTeamSize}
                       onChange={handleChange}
                       min="1"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 focus:outline-none transition-all duration-300"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 focus:outline-none transition-all duration-300"
                       required
                     />
                   </div>
@@ -296,7 +296,7 @@ const CreateHackathon = () => {
                   name="banner"
                   value={formData.banner}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 focus:outline-none transition-all duration-300"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 focus:outline-none transition-all duration-300"
                   placeholder="https://example.com/banner.jpg"
                 />
               </div>
@@ -307,7 +307,7 @@ const CreateHackathon = () => {
                   whileTap={{ scale: 0.98 }}
                   type="button"
                   onClick={nextStep}
-                  className="bg-gradient-to-r from-teal-500 to-teal-400 hover:from-teal-600 hover:to-teal-500 text-white font-semibold py-3 px-8 rounded-lg shadow-md hover:shadow-lg transition-all duration-300"
+                  className="bg-gradient-to-r from-purple-500 to-purple-400 hover:from-purple-600 hover:to-purple-500 text-white font-semibold py-3 px-8 rounded-lg shadow-md hover:shadow-lg transition-all duration-300"
                 >
                   Next
                 </motion.button>
@@ -332,7 +332,7 @@ const CreateHackathon = () => {
                       type="text"
                       value={rule}
                       onChange={(e) => handleRuleChange(index, e.target.value)}
-                      className="flex-grow px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 focus:outline-none transition-all duration-300"
+                      className="flex-grow px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 focus:outline-none transition-all duration-300"
                       placeholder={`Rule ${index + 1}`}
                       required
                     />
@@ -352,7 +352,7 @@ const CreateHackathon = () => {
                 <button
                   type="button"
                   onClick={addRule}
-                  className="mt-3 text-teal-600 hover:text-teal-800 flex items-center transition-colors duration-300"
+                  className="mt-3 text-purple-600 hover:text-purple-800 flex items-center transition-colors duration-300"
                 >
                   <svg className="w-5 h-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
@@ -365,7 +365,7 @@ const CreateHackathon = () => {
                 <h3 className="font-medium text-gray-700 mb-4">Judging Criteria</h3>
                 
                 {formData.judgingCriteria.map((criteria, index) => (
-                  <div key={index} className="bg-teal-50 p-5 rounded-xl mb-4">
+                  <div key={index} className="bg-purple-50 p-5 rounded-xl mb-4">
                     <div className="flex justify-between items-center mb-3">
                       <h4 className="font-medium text-gray-800">Criterion #{index + 1}</h4>
                       <button
@@ -386,7 +386,7 @@ const CreateHackathon = () => {
                           type="text"
                           value={criteria.name}
                           onChange={(e) => handleCriteriaChange(index, 'name', e.target.value)}
-                          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 focus:outline-none transition-all duration-300"
+                          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 focus:outline-none transition-all duration-300"
                           placeholder="e.g., Innovation, Technical Complexity"
                           required
                         />
@@ -400,7 +400,7 @@ const CreateHackathon = () => {
                           onChange={(e) => handleCriteriaChange(index, 'weightage', parseInt(e.target.value))}
                           min="1"
                           max="10"
-                          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 focus:outline-none transition-all duration-300"
+                          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 focus:outline-none transition-all duration-300"
                           required
                         />
                       </div>
@@ -411,7 +411,7 @@ const CreateHackathon = () => {
                       <textarea
                         value={criteria.description}
                         onChange={(e) => handleCriteriaChange(index, 'description', e.target.value)}
-                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 focus:outline-none transition-all duration-300"
+                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 focus:outline-none transition-all duration-300"
                         placeholder="Describe what judges should look for"
                         rows="2"
                       ></textarea>
@@ -422,7 +422,7 @@ const CreateHackathon = () => {
                 <button
                   type="button"
                   onClick={addCriteria}
-                  className="mt-3 text-teal-600 hover:text-teal-800 flex items-center transition-colors duration-300"
+                  className="mt-3 text-purple-600 hover:text-purple-800 flex items-center transition-colors duration-300"
                 >
                   <svg className="w-5 h-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
@@ -447,7 +447,7 @@ const CreateHackathon = () => {
                   whileTap={{ scale: 0.98 }}
                   type="button"
                   onClick={nextStep}
-                  className="bg-gradient-to-r from-teal-500 to-teal-400 hover:from-teal-600 hover:to-teal-500 text-white font-semibold py-3 px-8 rounded-lg shadow-md hover:shadow-lg transition-all duration-300"
+                  className="bg-gradient-to-r from-purple-500 to-purple-400 hover:from-purple-600 hover:to-purple-500 text-white font-semibold py-3 px-8 rounded-lg shadow-md hover:shadow-lg transition-all duration-300"
                 >
                   Next
                 </motion.button>
@@ -464,7 +464,7 @@ const CreateHackathon = () => {
               <h2 className="text-xl font-semibold mb-6 text-gray-800">Prizes & Rewards</h2>
               
               {formData.prizes.map((prize, index) => (
-                <div key={index} className="bg-teal-50 p-5 rounded-xl mb-4">
+                <div key={index} className="bg-purple-50 p-5 rounded-xl mb-4">
                   <div className="flex justify-between items-center mb-3">
                     <h4 className="font-medium text-gray-800">Prize #{index + 1}</h4>
                     <button
@@ -485,7 +485,7 @@ const CreateHackathon = () => {
                         type="text"
                         value={prize.rank}
                         onChange={(e) => handlePrizeChange(index, 'rank', e.target.value)}
-                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 focus:outline-none transition-all duration-300"
+                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 focus:outline-none transition-all duration-300"
                         placeholder="e.g., 1st Place, Best UI"
                         required
                       />
@@ -497,7 +497,7 @@ const CreateHackathon = () => {
                         type="text"
                         value={prize.prize}
                         onChange={(e) => handlePrizeChange(index, 'prize', e.target.value)}
-                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 focus:outline-none transition-all duration-300"
+                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 focus:outline-none transition-all duration-300"
                         placeholder="e.g., Amazon Gift Card, Cash Prize"
                         required
                       />
@@ -510,7 +510,7 @@ const CreateHackathon = () => {
                         value={prize.amount}
                         onChange={(e) => handlePrizeChange(index, 'amount', parseInt(e.target.value))}
                         min="0"
-                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 focus:outline-none transition-all duration-300"
+                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 focus:outline-none transition-all duration-300"
                         placeholder="0"
                       />
                     </div>
@@ -521,7 +521,7 @@ const CreateHackathon = () => {
               <button
                 type="button"
                 onClick={addPrize}
-                className="mb-8 text-teal-600 hover:text-teal-800 flex items-center transition-colors duration-300"
+                className="mb-8 text-purple-600 hover:text-purple-800 flex items-center transition-colors duration-300"
               >
                 <svg className="w-5 h-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
@@ -545,7 +545,7 @@ const CreateHackathon = () => {
                   whileTap={{ scale: 0.98 }}
                   type="button"
                   onClick={nextStep}
-                  className="bg-gradient-to-r from-teal-500 to-teal-400 hover:from-teal-600 hover:to-teal-500 text-white font-semibold py-3 px-8 rounded-lg shadow-md hover:shadow-lg transition-all duration-300"
+                  className="bg-gradient-to-r from-purple-500 to-purple-400 hover:from-purple-600 hover:to-purple-500 text-white font-semibold py-3 px-8 rounded-lg shadow-md hover:shadow-lg transition-all duration-300"
                 >
                   Next
                 </motion.button>
@@ -567,7 +567,7 @@ const CreateHackathon = () => {
                 </div>
               )}
               
-              <div className="bg-teal-50 p-6 rounded-xl mb-6">
+              <div className="bg-purple-50 p-6 rounded-xl mb-6">
                 <h3 className="font-semibold text-gray-800 mb-4">Basic Details</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4">
                   <div>
@@ -605,7 +605,7 @@ const CreateHackathon = () => {
                 </div>
               </div>
               
-              <div className="bg-teal-50 p-6 rounded-xl mb-6">
+              <div className="bg-purple-50 p-6 rounded-xl mb-6">
                 <h3 className="font-semibold text-gray-800 mb-4">Rules</h3>
                 <ul className="list-disc pl-5 space-y-2">
                   {formData.rules.map((rule, index) => (
@@ -614,14 +614,14 @@ const CreateHackathon = () => {
                 </ul>
               </div>
               
-              <div className="bg-teal-50 p-6 rounded-xl mb-6">
+              <div className="bg-purple-50 p-6 rounded-xl mb-6">
                 <h3 className="font-semibold text-gray-800 mb-4">Judging Criteria</h3>
                 <div className="space-y-4">
                   {formData.judgingCriteria.map((criteria, index) => (
-                    <div key={index} className="border-b border-teal-100 pb-3 last:border-b-0 last:pb-0">
+                    <div key={index} className="border-b border-purple-100 pb-3 last:border-b-0 last:pb-0">
                       <div className="flex justify-between">
                         <h4 className="font-medium text-gray-800">{criteria.name}</h4>
-                        <span className="text-teal-700 font-medium">{criteria.weightage}/10</span>
+                        <span className="text-purple-700 font-medium">{criteria.weightage}/10</span>
                       </div>
                       {criteria.description && <p className="text-sm text-gray-600 mt-1">{criteria.description}</p>}
                     </div>
@@ -629,14 +629,14 @@ const CreateHackathon = () => {
                 </div>
               </div>
               
-              <div className="bg-teal-50 p-6 rounded-xl mb-6">
+              <div className="bg-purple-50 p-6 rounded-xl mb-6">
                 <h3 className="font-semibold text-gray-800 mb-4">Prizes</h3>
                 <div className="space-y-4">
                   {formData.prizes.map((prize, index) => (
-                    <div key={index} className="border-b border-teal-100 pb-3 last:border-b-0 last:pb-0">
+                    <div key={index} className="border-b border-purple-100 pb-3 last:border-b-0 last:pb-0">
                       <div className="flex justify-between">
                         <h4 className="font-medium text-gray-800">{prize.rank}</h4>
-                        <span className="text-teal-700 font-medium">
+                        <span className="text-purple-700 font-medium">
                           {prize.amount > 0 ? `$${prize.amount}` : ''}
                         </span>
                       </div>
@@ -663,7 +663,7 @@ const CreateHackathon = () => {
                   whileTap={{ scale: 0.98 }}
                   type="button"
                   onClick={handleSubmit}
-                  className="bg-gradient-to-r from-teal-500 to-teal-400 hover:from-teal-600 hover:to-teal-500 text-white font-semibold py-3 px-8 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 flex items-center"
+                  className="bg-gradient-to-r from-purple-500 to-purple-400 hover:from-purple-600 hover:to-purple-500 text-white font-semibold py-3 px-8 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 flex items-center"
                   disabled={loading}
                 >
                   {loading ? (

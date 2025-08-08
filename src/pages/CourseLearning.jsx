@@ -1,4 +1,4 @@
-// src/pages/CourseLearning.jsx
+
 import React, { useState, useEffect } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -21,33 +21,24 @@ const CourseLearning = () => {
   useEffect(() => {
     const fetchCourse = async () => {
       try {
-        // Simulated API call - replace with actual API
         const data = await getCourseById(courseId);
-        setCourse(data);         
-        // Simulated progress data
-        setProgress(30); // 30% complete
+        setCourse(data);
+        setProgress(30);
         setCompletedLessons(['lesson1', 'lesson2', 'lesson3']);
       } catch (err) {
         setError('Failed to load course content');
-        console.error(err);
       } finally {
         setLoading(false);
       }
     };
-
     fetchCourse();
-    
-    // Scroll to top when component mounts
     window.scrollTo(0, 0);
   }, [courseId]);
 
   const handleLessonComplete = () => {
-    // Mark current lesson as complete
     if (!completedLessons.includes(`lesson${currentLessonIndex}`)) {
       const newCompletedLessons = [...completedLessons, `lesson${currentLessonIndex}`];
       setCompletedLessons(newCompletedLessons);
-      
-      // Calculate new progress
       const totalLessons = course.sections.reduce((total, section) => total + section.lessons.length, 0);
       const newProgress = Math.round((newCompletedLessons.length / totalLessons) * 100);
       setProgress(newProgress);
@@ -55,20 +46,14 @@ const CourseLearning = () => {
   };
 
   const handleNextLesson = () => {
-    // Mark current lesson as complete
     handleLessonComplete();
-    
-    // Navigate to next lesson
     const currentSection = course.sections[currentSectionIndex];
     if (currentLessonIndex < currentSection.lessons.length - 1) {
-      // Next lesson in same section
       setCurrentLessonIndex(currentLessonIndex + 1);
     } else if (currentSectionIndex < course.sections.length - 1) {
-      // First lesson in next section
       setCurrentSectionIndex(currentSectionIndex + 1);
       setCurrentLessonIndex(0);
     } else {
-      // Course completed
       navigate(`/courses/${courseId}/quiz`);
     }
   };
@@ -83,7 +68,7 @@ const CourseLearning = () => {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center pt-20">
         <div className="text-center">
-          <div className="w-16 h-16 border-4 border-teal-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+          <div className="w-16 h-16 border-4 border-purple-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
           <p className="text-gray-600">Loading course content...</p>
         </div>
       </div>
@@ -94,22 +79,18 @@ const CourseLearning = () => {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center pt-20">
         <div className="text-center max-w-md mx-auto p-8 bg-white rounded-xl shadow-md">
-          <svg className="w-16 h-16 text-red-500 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          <svg className="w-16 h-16 text-red-500 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
           <h2 className="text-2xl font-bold text-gray-800 mb-2">Oops! Something went wrong</h2>
           <p className="text-gray-600 mb-6">{error || 'Course content not found'}</p>
-          <Link 
-            to="/courses" 
-            className="inline-block px-6 py-3 bg-teal-500 text-white font-medium rounded-lg hover:bg-teal-600 transition-colors duration-300"
-          >
+          <Link to="/courses" className="inline-block px-6 py-3 bg-purple-500 text-white font-medium rounded-lg hover:bg-purple-600 transition-colors duration-300">
             Back to Courses
           </Link>
         </div>
       </div>
     );
   }
-
   const currentSection = course.sections[currentSectionIndex];
   const currentLesson = currentSection.lessons[currentLessonIndex];
 
@@ -122,13 +103,13 @@ const CourseLearning = () => {
             <div className="flex items-center">
               <button 
                 onClick={() => setIsSidebarOpen(!isSidebarOpen)}
-                className="mr-4 text-gray-600 hover:text-teal-600 md:hidden"
+                className="mr-4 text-gray-600 hover:text-purple-600 md:hidden"
               >
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path>
                 </svg>
               </button>
-              <Link to={`/courses/${courseId}`} className="text-gray-600 hover:text-teal-600 flex items-center">
+              <Link to={`/courses/${courseId}`} className="text-gray-600 hover:text-purple-600 flex items-center">
                 <svg className="w-5 h-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
                 </svg>
@@ -143,7 +124,7 @@ const CourseLearning = () => {
             <div className="flex items-center">
               <div className="hidden md:block w-48 bg-gray-200 rounded-full h-2.5 mr-4">
                 <div 
-                  className="bg-teal-600 h-2.5 rounded-full" 
+                  className="bg-purple-600 h-2.5 rounded-full" 
                   style={{ width: `${progress}%` }}
                 ></div>
               </div>
@@ -166,7 +147,7 @@ const CourseLearning = () => {
               <h2 className="font-semibold text-gray-800">Course Content</h2>
               <button 
                 onClick={() => setIsSidebarOpen(false)}
-                className="text-gray-600 hover:text-teal-600 md:hidden"
+                className="text-gray-600 hover:text-purple-600 md:hidden"
               >
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
@@ -192,7 +173,7 @@ const CourseLearning = () => {
                           key={lessonIndex}
                           onClick={() => handleSelectLesson(sectionIndex, lessonIndex)}
                           className={`w-full text-left p-4 border-t flex items-center transition-colors duration-300 ${
-                            isActive ? 'bg-teal-50 text-teal-600' : isCompleted ? 'bg-green-50' : 'hover:bg-gray-50'
+                            isActive ? 'bg-purple-50 text-purple-600' : isCompleted ? 'bg-green-50' : 'hover:bg-gray-50'
                           }`}
                         >
                           {isCompleted ? (
@@ -200,7 +181,7 @@ const CourseLearning = () => {
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                             </svg>
                           ) : lesson.type === 'video' ? (
-                            <svg className="w-5 h-5 text-teal-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <svg className="w-5 h-5 text-purple-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path>
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                             </svg>
@@ -218,7 +199,7 @@ const CourseLearning = () => {
                             <span className="text-sm text-gray-500 block">{lesson.duration}</span>
                           </div>
                           {isActive && (
-                            <svg className="w-5 h-5 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <svg className="w-5 h-5 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
                             </svg>
                           )}
@@ -332,7 +313,7 @@ const CourseLearning = () => {
               
               <button
                 onClick={handleNextLesson}
-                className="flex items-center px-4 py-2 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition-colors"
+                className="flex items-center px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors"
               >
                 {currentSectionIndex === course.sections.length - 1 && 
                  currentLessonIndex === currentSection.lessons.length - 1 

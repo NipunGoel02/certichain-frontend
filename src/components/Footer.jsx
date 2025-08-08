@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-r from-gray-800 to-gray-900 text-white pt-16 pb-8">
+    <footer className="bg-gradient-to-r from-gray-800 to-gray-900 text-white pt-16 pb-8 rounded-b-[60px]">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <motion.div
@@ -14,7 +14,10 @@ const Footer = () => {
             className="col-span-1 md:col-span-1"
           >
             <Link to="/" className="inline-block mb-4">
-              <span className="text-2xl font-bold bg-gradient-to-r from-primary-400 to-secondary-300 bg-clip-text text-transparent">CertiChain</span>
+<span className="text-2xl font-bold bg-gradient-to-r from-[#C9A7F0] via-[#A775E5] to-[#8C5CC4] bg-clip-text text-transparent">
+  CertiChain
+</span>
+
             </Link>
             <p className="text-gray-400 mb-4">Learn, earn certificates, and build your blockchain credentials all in one place.</p>
             <div className="flex space-x-4">
@@ -38,7 +41,8 @@ const Footer = () => {
             transition={{ duration: 0.5, delay: 0.1 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-lg font-semibold mb-4 bg-gradient-to-r from-primary-400 to-secondary-300 bg-clip-text text-transparent">Platform</h3>
+            <h3 className="text-lg font-semibold mb-4 bg-gradient-to-r from-[#C9A7F0] via-[#A775E5] to-[#8C5CC4] bg-clip-text text-transparent"
+>Platform</h3>
             <ul className="space-y-2">
               <li><Link to="/courses" className="text-gray-400 hover:text-primary-400 transition-colors duration-300">Courses</Link></li>
               <li><Link to="/certificates" className="text-gray-400 hover:text-primary-400 transition-colors duration-300">Certificates</Link></li>
@@ -53,7 +57,8 @@ const Footer = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-lg font-semibold mb-4 bg-gradient-to-r from-primary-400 to-secondary-300 bg-clip-text text-transparent">Company</h3>
+            <h3 className="text-lg font-semibold mb-4 bg-gradient-to-r from-[#C9A7F0] via-[#A775E5] to-[#8C5CC4] bg-clip-text text-transparent"
+>Company</h3>
             <ul className="space-y-2">
               <li><Link to="/about" className="text-gray-400 hover:text-primary-400 transition-colors duration-300">About Us</Link></li>
               <li><Link to="/contact" className="text-gray-400 hover:text-primary-400 transition-colors duration-300">Contact</Link></li>
@@ -68,7 +73,8 @@ const Footer = () => {
             transition={{ duration: 0.5, delay: 0.3 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-lg font-semibold mb-4 bg-gradient-to-r from-primary-400 to-secondary-300 bg-clip-text text-transparent">Legal</h3>
+            <h3 className="text-lg font-semibold mb-4 bg-gradient-to-r from-[#C9A7F0] via-[#A775E5] to-[#8C5CC4] bg-clip-text text-transparent"
+>Legal</h3>
             <ul className="space-y-2">
               <li><Link to="/terms" className="text-gray-400 hover:text-primary-400 transition-colors duration-300">Terms of Service</Link></li>
               <li><Link to="/privacy" className="text-gray-400 hover:text-primary-400 transition-colors duration-300">Privacy Policy</Link></li>

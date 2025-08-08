@@ -4,7 +4,7 @@ import { Outlet } from 'react-router-dom';
 
 const Layout = () => {
   const backgroundStyle = {
-    backgroundImage: `url('./image.png')`,
+    backgroundImage: `url('./ime.png')`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',

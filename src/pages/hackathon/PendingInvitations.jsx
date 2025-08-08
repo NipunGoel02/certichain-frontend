@@ -87,7 +87,7 @@ const PendingInvitations = () => {
   if (loading) {
     return (
       <div className="flex justify-center items-center h-64">
-        <div className="w-12 h-12 border-4 border-teal-500 border-t-transparent rounded-full animate-spin"></div>
+        <div className="w-12 h-12 border-4 border-purple-500 border-t-transparent rounded-full animate-spin"></div>
       </div>
     );
   }
@@ -117,7 +117,7 @@ const PendingInvitations = () => {
       <div className="bg-white rounded-xl shadow-md p-6 overflow-x-auto">
         <table className="min-w-full table-auto">
           <thead>
-            <tr className="bg-teal-600 text-white">
+            <tr className="bg-purple-600 text-white">
               <th className="px-4 py-2">Hackathon</th>
               <th className="px-4 py-2">Requested At</th>
               <th className="px-4 py-2">Action</th>

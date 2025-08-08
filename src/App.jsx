@@ -63,8 +63,10 @@ function App() {
   return (
         <>
       {loading && <Preloader />}
+<div
+  className={`transition-opacity duration-1000 ${loading ? 'opacity-0' : 'opacity-100'}`}
+>
 
-     <div className={loading ? 'hidden' : ''}>
 
     <BrowserRouter>
       <AuthProvider>

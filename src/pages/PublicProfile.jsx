@@ -65,7 +65,7 @@ export default function PublicProfile() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-teal-50 to-blue-100 pb-12">
+    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-100 pb-12">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Animated Header and Share Button */}
         <motion.div
@@ -73,14 +73,14 @@ export default function PublicProfile() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <div className="bg-gradient-to-br from-teal-600 to-blue-500 rounded-t-xl shadow-lg p-8 text-white mb-2">
+          <div className="bg-gradient-to-br from-purple-600 to-blue-500 rounded-t-xl shadow-lg p-8 text-white mb-2">
             <h1 className="text-3xl font-bold">{user.name} Public Profile</h1>
-            <p className="mt-2 text-teal-100">View courses, hackathons, internships and certificates</p>
+            <p className="mt-2 text-purple-100">View courses, hackathons, internships and certificates</p>
             <div className="absolute top-8 right-8 flex flex-col items-end">
               <motion.button
                 whileTap={{ scale: 0.95 }}
                 whileHover={{ scale: 1.05, backgroundColor: "#14b8a6" }}
-                className="bg-white text-teal-700 px-4 py-2 rounded-lg font-semibold shadow-lg flex items-center gap-2 transition-all duration-300"
+                className="bg-white text-purple-700 px-4 py-2 rounded-lg font-semibold shadow-lg flex items-center gap-2 transition-all duration-300"
                 onClick={handleShare}
               >
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2"
@@ -95,7 +95,7 @@ export default function PublicProfile() {
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: -40 }}
                     exit={{ opacity: 0, y: -10 }}
-                    className="mt-2 px-3 py-1 bg-teal-700 text-white rounded shadow-lg text-sm"
+                    className="mt-2 px-3 py-1 bg-purple-700 text-white rounded shadow-lg text-sm"
                   >
                     Link copied!
                   </motion.div>
@@ -116,7 +116,7 @@ export default function PublicProfile() {
             >
               <div className="text-center">
                 <div className="relative mx-auto w-32 h-32 mb-4">
-                <div className="w-32 h-32 rounded-full bg-teal-100 flex items-center justify-center text-teal-500 text-4xl font-bold overflow-hidden border-4 border-white shadow-xl">
+                <div className="w-32 h-32 rounded-full bg-purple-100 flex items-center justify-center text-purple-500 text-4xl font-bold overflow-hidden border-4 border-white shadow-xl">
                   {user.profilePicture ? (
                     <img
                       src={user.profilePicture.startsWith('http') ? user.profilePicture : 'http://localhost:5000' + user.profilePicture}
@@ -152,8 +152,8 @@ export default function PublicProfile() {
                 animate="show"
               >
                 <motion.div variants={item} className="flex items-center mb-6">
-                  <div className="w-10 h-10 rounded-full bg-teal-100 flex items-center justify-center mr-4">
-                    <svg className="w-6 h-6 text-teal-600" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M12 6v6m0 0v6m0-6h6m-6 0H6" /></svg>
+                  <div className="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center mr-4">
+                    <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M12 6v6m0 0v6m0-6h6m-6 0H6" /></svg>
                   </div>
                   <h2 className="text-xl font-bold text-gray-800">Enrolled Courses</h2>
                 </motion.div>
@@ -166,12 +166,12 @@ export default function PublicProfile() {
                         className="bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300"
                       >
                         <Link to={`/courses/${course._id}`} className="block p-4 flex items-center">
-                          <div className="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center text-teal-500 mr-4">
+                          <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center text-purple-500 mr-4">
                             <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M12 6v6m0 0v6m0-6h6m-6 0H6" /></svg>
                           </div>
                           <div>
                             <span className="font-medium text-gray-800">{course.title}</span>
-                            <div className="text-sm text-teal-600 mt-1">Continue Learning</div>
+                            <div className="text-sm text-purple-600 mt-1">Continue Learning</div>
                           </div>
                           <svg className="h-5 w-5 text-gray-400 ml-auto" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" /></svg>
                         </Link>
@@ -244,8 +244,8 @@ export default function PublicProfile() {
                 animate="show"
               >
                 <motion.div variants={item} className="flex items-center mb-6">
-                  <div className="w-10 h-10 rounded-full bg-teal-100 flex items-center justify-center mr-4">
-                    <svg className="w-6 h-6 text-teal-600" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" /></svg>
+                  <div className="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center mr-4">
+                    <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" /></svg>
                   </div>
                   <h2 className="text-xl font-bold text-gray-800">Registered Hackathons</h2>
                 </motion.div>
@@ -258,13 +258,13 @@ export default function PublicProfile() {
                         className="bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300"
                       >
                         <Link to={`/hackathons/${hackathon._id}`} className="block p-4 flex items-center">
-                          <div className="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center text-teal-500 mr-4">
+                          <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center text-purple-500 mr-4">
                             <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" /></svg>
                           </div>
                           <div>
                             <span className="font-medium text-gray-800">{hackathon.title}</span>
                             <div className="flex items-center mt-1">
-                              <span className="text-xs bg-teal-100 text-teal-800 px-2 py-0.5 rounded-full">Already Registered</span>
+                              <span className="text-xs bg-purple-100 text-purple-800 px-2 py-0.5 rounded-full">Already Registered</span>
                               <span className="text-xs text-gray-500 ml-2">
                                 {new Date(hackathon.startDate).toLocaleDateString()} - {new Date(hackathon.endDate).toLocaleDateString()}
                               </span>
@@ -291,8 +291,8 @@ export default function PublicProfile() {
                 animate="show"
               >
                 <motion.div variants={item} className="flex items-center mb-6">
-                  <div className="w-10 h-10 rounded-full bg-teal-100 flex items-center justify-center mr-4">
-                    <svg className="w-6 h-6 text-teal-600" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M12 6v6m0 0v6m0-6h6m-6 0H6" /></svg>
+                  <div className="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center mr-4">
+                    <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M12 6v6m0 0v6m0-6h6m-6 0H6" /></svg>
                   </div>
                   <h2 className="text-xl font-bold text-gray-800">Internships</h2>
                 </motion.div>
@@ -330,8 +330,8 @@ export default function PublicProfile() {
                 animate="show"
               >
                 <motion.div variants={item} className="flex items-center mb-6">
-                  <div className="w-10 h-10 rounded-full bg-teal-100 flex items-center justify-center mr-4">
-                    <svg className="w-6 h-6 text-teal-600" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M12 6v6m0 0v6m0-6h6m-6 0H6" /></svg>
+                  <div className="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center mr-4">
+                    <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M12 6v6m0 0v6m0-6h6m-6 0H6" /></svg>
                   </div>
                   <h2 className="text-xl font-bold text-gray-800">Certificates</h2>
                 </motion.div>
@@ -349,7 +349,7 @@ export default function PublicProfile() {
                             alt={cert.metadata?.name || 'Certificate'}
                             className="w-full h-48 object-cover"
                           />
-                          <div className="absolute top-2 right-2 bg-teal-500 text-white text-xs px-2 py-1 rounded-full">
+                          <div className="absolute top-2 right-2 bg-purple-500 text-white text-xs px-2 py-1 rounded-full">
                             NFT
                           </div>
                         </div>
@@ -373,7 +373,7 @@ export default function PublicProfile() {
                               View on Blockchain
                             </a>
                             <button
-                              className="text-xs bg-teal-100 hover:bg-teal-200 text-teal-800 px-3 py-1 rounded-full transition-colors duration-300"
+                              className="text-xs bg-purple-100 hover:bg-purple-200 text-purple-800 px-3 py-1 rounded-full transition-colors duration-300"
                               onClick={() => navigator.clipboard.writeText(
                                 `https://sepolia.etherscan.io/token/${cert.contract_address}?a=${cert.tokenId}`
                               )}
@@ -391,7 +391,7 @@ export default function PublicProfile() {
                     <p className="text-gray-600 mb-4">This user hasn't earned any certificates yet. Complete courses to earn NFT certificates.</p>
                     <Link
                       to="/courses"
-                      className="inline-flex items-center px-4 py-2 bg-teal-600 text-white font-medium rounded-lg hover:bg-teal-700 transition-colors duration-300"
+                      className="inline-flex items-center px-4 py-2 bg-purple-600 text-white font-medium rounded-lg hover:bg-purple-700 transition-colors duration-300"
                     >
                       Continue Learning
                     </Link>

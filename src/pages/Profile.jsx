@@ -760,20 +760,20 @@ const handleProfileImageChange = async (e) => {
   if (!currentUser) {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-        <div className="w-16 h-16 border-4 border-teal-500 border-t-transparent rounded-full animate-spin"></div>
+        <div className="w-16 h-16 border-4 border-purple-500 border-t-transparent rounded-full animate-spin"></div>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-teal-50 to-blue-100 pb-12">
+    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-100 pb-12">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Share Profile Button */}
         <div className="flex justify-end pt-8 mb-2 relative">
           <motion.button
             whileTap={{ scale: 0.96 }}
             whileHover={{ scale: 1.05, backgroundColor: "#14b8a6" }}
-            className="bg-gradient-to-r from-teal-500 to-blue-500 text-white px-5 py-2 rounded-xl font-semibold shadow-lg flex items-center gap-2 transition-all duration-300"
+            className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-5 py-2 rounded-xl font-semibold shadow-lg flex items-center gap-2 transition-all duration-300"
             onClick={handleShare}
           >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2"
@@ -788,7 +788,7 @@ const handleProfileImageChange = async (e) => {
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: -40 }}
                 exit={{ opacity: 0, y: -10 }}
-                className="absolute right-0 mt-2 px-3 py-1 bg-teal-600 text-white rounded shadow-lg text-sm"
+                className="absolute right-0 mt-2 px-3 py-1 bg-purple-600 text-white rounded shadow-lg text-sm"
               >
                 Link copied!
               </motion.div>
@@ -802,9 +802,9 @@ const handleProfileImageChange = async (e) => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <div className="bg-gradient-to-br from-teal-600 to-blue-500 rounded-t-xl shadow-lg p-8 text-white mb-2">
+          <div className="bg-gradient-to-br from-purple-600 to-blue-500 rounded-t-xl shadow-lg p-8 text-white mb-2">
             <h1 className="text-3xl font-bold">Your Profile</h1>
-            <p className="mt-2 text-teal-100">Manage your account, courses and certificates</p>
+            <p className="mt-2 text-purple-100">Manage your account, courses and certificates</p>
           </div>
         </motion.div>
 
@@ -821,7 +821,7 @@ const handleProfileImageChange = async (e) => {
                 {/* --- Profile Image Upload Area --- */}
                 <div className="relative mx-auto w-32 h-32 mb-4">
 <div
-  className="w-32 h-32 rounded-full bg-teal-100 flex items-center justify-center text-teal-500 text-4xl font-bold overflow-hidden border-4 border-white shadow-xl cursor-pointer group"
+  className="w-32 h-32 rounded-full bg-purple-100 flex items-center justify-center text-purple-500 text-4xl font-bold overflow-hidden border-4 border-white shadow-xl cursor-pointer group"
   onClick={handleProfileImageClick}
   title="Click to change profile picture"
 >
@@ -843,7 +843,7 @@ const handleProfileImageChange = async (e) => {
 />
 
   <span className="absolute bottom-2 right-2 bg-white rounded-full p-1 shadow opacity-80 group-hover:opacity-100 transition-opacity">
-    <svg className="w-5 h-5 text-teal-500" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+    <svg className="w-5 h-5 text-purple-500" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
       <path d="M15.232 5.232l3.536 3.536M9 13l6-6m2 2a2.828 2.828 0 11-4-4l6 6a2.828 2.828 0 01-4-4z" />
     </svg>
   </span>
@@ -863,7 +863,7 @@ const handleProfileImageChange = async (e) => {
                   ) : (
                     <button
                       onClick={connectWallet}
-                      className="w-full text-sm bg-teal-500 hover:bg-teal-600 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-300"
+                      className="w-full text-sm bg-purple-500 hover:bg-purple-600 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-300"
                     >
                       Connect Wallet to View Certificates
                     </button>
@@ -898,8 +898,8 @@ const handleProfileImageChange = async (e) => {
               {/* Enrolled Courses */}
               <motion.div className="p-8 border-b border-gray-200" variants={container} initial="hidden" animate="show">
                 <motion.div variants={item} className="flex items-center mb-6">
-                  <div className="w-10 h-10 rounded-full bg-teal-100 flex items-center justify-center mr-4">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <div className="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center mr-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                     </svg>
                   </div>
@@ -921,7 +921,7 @@ const handleProfileImageChange = async (e) => {
                             to={`/courses/${courseId}`}
                             className="block p-4 flex items-center"
                           >
-                            <div className="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center text-teal-500 mr-4">
+                            <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center text-purple-500 mr-4">
                               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" />
                               </svg>
@@ -930,7 +930,7 @@ const handleProfileImageChange = async (e) => {
                               <span className="font-medium text-gray-800">
                                 {coursesMap[courseId] || `Course ID: ${courseId}`}
                               </span>
-                              <div className="text-sm text-teal-600 mt-1">Continue Learning</div>
+                              <div className="text-sm text-purple-600 mt-1">Continue Learning</div>
                             </div>
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-gray-400 ml-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
@@ -949,7 +949,7 @@ const handleProfileImageChange = async (e) => {
                       <p className="text-gray-600 mb-4">You have not enrolled in any courses yet.</p>
                       <Link
                         to="/courses"
-                        className="inline-flex items-center px-4 py-2 bg-teal-600 text-white font-medium rounded-lg hover:bg-teal-700 transition-colors duration-300"
+                        className="inline-flex items-center px-4 py-2 bg-purple-600 text-white font-medium rounded-lg hover:bg-purple-700 transition-colors duration-300"
                       >
                         Browse Courses
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -1015,7 +1015,7 @@ const handleProfileImageChange = async (e) => {
               {/* Pending Certificate Requests */}
               <motion.div className="p-8 border-b border-gray-200" variants={container} initial="hidden" animate="show">
                 <motion.div variants={item} className="flex items-center mb-6">
-                  <div className="w-10 h-10 rounded-full bg-teal-100 flex items-center justify-center mr-4"></div>
+                  <div className="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center mr-4"></div>
                   <h2 className="text-xl font-bold text-gray-800">Pending Certificate Requests</h2>
                 </motion.div>
                 <PendingInvitations />
@@ -1024,7 +1024,7 @@ const handleProfileImageChange = async (e) => {
               {/* Registered Hackathons */}
               <motion.div className="p-8 border-b border-gray-200" variants={container} initial="hidden" animate="show">
                 <motion.div variants={item} className="flex items-center mb-6">
-                  <div className="w-10 h-10 rounded-full bg-teal-100 flex items-center justify-center mr-4"></div>
+                  <div className="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center mr-4"></div>
                   <h2 className="text-xl font-bold text-gray-800">Registered Hackathons</h2>
                 </motion.div>
                 {registeredHackathons && registeredHackathons.length > 0 ? (
@@ -1039,11 +1039,11 @@ const handleProfileImageChange = async (e) => {
                           to={`/hackathons/${hackathon._id}`}
                           className="block p-4 flex items-center"
                         >
-                          <div className="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center text-teal-500 mr-4"></div>
+                          <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center text-purple-500 mr-4"></div>
                           <div>
                             <span className="font-medium text-gray-800">{hackathon.title}</span>
                             <div className="flex items-center mt-1">
-                              <span className="text-xs bg-teal-100 text-teal-800 px-2 py-0.5 rounded-full">Already Registered</span>
+                              <span className="text-xs bg-purple-100 text-purple-800 px-2 py-0.5 rounded-full">Already Registered</span>
                               <span className="text-xs text-gray-500 ml-2">
                                 {new Date(hackathon.startDate).toLocaleDateString()} - {new Date(hackathon.endDate).toLocaleDateString()}
                               </span>
@@ -1064,7 +1064,7 @@ const handleProfileImageChange = async (e) => {
                     <p className="text-gray-600 mb-4">You have not registered for any hackathons yet.</p>
                     <Link
                       to="/hackathons"
-                      className="inline-flex items-center px-4 py-2 bg-teal-600 text-white font-medium rounded-lg hover:bg-teal-700 transition-colors duration-300"
+                      className="inline-flex items-center px-4 py-2 bg-purple-600 text-white font-medium rounded-lg hover:bg-purple-700 transition-colors duration-300"
                     >
                       Browse Hackathons
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -1078,7 +1078,7 @@ const handleProfileImageChange = async (e) => {
               {/* Team Invitations */}
               <motion.div className="p-8 border-b border-gray-200" variants={container} initial="hidden" animate="show">
                 <motion.div variants={item} className="flex items-center mb-6">
-                  <div className="w-10 h-10 rounded-full bg-teal-100 flex items-center justify-center mr-4"></div>
+                  <div className="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center mr-4"></div>
                   <h2 className="text-xl font-bold text-gray-800">Team Invitations</h2>
                 </motion.div>
                 <TeamInvitations />
@@ -1087,7 +1087,7 @@ const handleProfileImageChange = async (e) => {
               {/* Internship Pending Invitations */}
               <motion.div className="p-8 border-b border-gray-200" variants={container} initial="hidden" animate="show">
                 <motion.div variants={item} className="flex items-center mb-6">
-                  <div className="w-10 h-10 rounded-full bg-teal-100 flex items-center justify-center mr-4"></div>
+                  <div className="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center mr-4"></div>
                   <h2 className="text-xl font-bold text-gray-800">Pending Internship Invitations</h2>
                 </motion.div>
                 <InternshipPendingInvitations />
@@ -1096,7 +1096,7 @@ const handleProfileImageChange = async (e) => {
               {/* Certificates */}
               <motion.div className="p-8" variants={container} initial="hidden" animate="show">
                 <motion.div variants={item} className="flex items-center mb-6">
-                  <div className="w-10 h-10 rounded-full bg-teal-100 flex items-center justify-center mr-4"></div>
+                  <div className="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center mr-4"></div>
                   <h2 className="text-xl font-bold text-gray-800">My Certificates</h2>
                 </motion.div>
                 {walletConnected ? (
@@ -1114,7 +1114,7 @@ const handleProfileImageChange = async (e) => {
                               alt={cert.metadata?.name || 'Certificate'}
                               className="w-full h-48 object-cover"
                             />
-                            <div className="absolute top-2 right-2 bg-teal-500 text-white text-xs px-2 py-1 rounded-full">
+                            <div className="absolute top-2 right-2 bg-purple-500 text-white text-xs px-2 py-1 rounded-full">
                               NFT
                             </div>
                           </div>
@@ -1137,7 +1137,7 @@ const handleProfileImageChange = async (e) => {
                               >
                                 View on Blockchain
                               </a>
-                              <button className="text-xs bg-teal-100 hover:bg-teal-200 text-teal-800 px-3 py-1 rounded-full transition-colors duration-300"
+                              <button className="text-xs bg-purple-100 hover:bg-purple-200 text-purple-800 px-3 py-1 rounded-full transition-colors duration-300"
                                 onClick={() => {
                                   navigator.clipboard.writeText(
                                     `https://sepolia.etherscan.io/token/${cert.contract_address}?a=${cert.tokenId}`
@@ -1156,7 +1156,7 @@ const handleProfileImageChange = async (e) => {
                       <p className="text-gray-600 mb-4">You haven't earned any certificates yet. Complete courses to earn NFT certificates.</p>
                       <Link
                         to="/courses"
-                        className="inline-flex items-center px-4 py-2 bg-teal-600 text-white font-medium rounded-lg hover:bg-teal-700 transition-colors duration-300"
+                        className="inline-flex items-center px-4 py-2 bg-purple-600 text-white font-medium rounded-lg hover:bg-purple-700 transition-colors duration-300"
                       >
                         Continue Learning
                       </Link>
@@ -1167,7 +1167,7 @@ const handleProfileImageChange = async (e) => {
                     <p className="text-gray-600 mb-4">Connect your wallet to view your earned certificates.</p>
                     <button
                       onClick={connectWallet}
-                      className="inline-flex items-center px-4 py-2 bg-teal-600 text-white font-medium rounded-lg hover:bg-teal-700 transition-colors duration-300"
+                      className="inline-flex items-center px-4 py-2 bg-purple-600 text-white font-medium rounded-lg hover:bg-purple-700 transition-colors duration-300"
                     >
                       Connect Wallet
                     </button>

@@ -73,7 +73,7 @@ export default function Signup() {
         </div>
         <button
           type="submit"
-          className="w-full bg-teal-500 text-white p-2 rounded hover:bg-teal-600"
+          className="w-full bg-purple-500 text-white p-2 rounded hover:bg-purple-600"
         >
           Sign Up
         </button>
@@ -81,7 +81,7 @@ export default function Signup() {
       <div className="mt-4 text-center">
       </div>
       <div className="mt-4 text-center">
-        Already have an account? <Link to="/login" className="text-teal-500">Login</Link>
+        Already have an account? <Link to="/login" className="text-purple-500">Login</Link>
       </div>
     </div>
   );

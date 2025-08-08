@@ -692,7 +692,7 @@ const InternshipCertificate = () => {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center pt-20">
         <div className="text-center">
-          <div className="w-16 h-16 border-4 border-teal-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+          <div className="w-16 h-16 border-4 border-purple-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
           <p className="text-gray-600">Loading certificate...</p>
         </div>
       </div>
@@ -707,7 +707,7 @@ const InternshipCertificate = () => {
           <p className="text-gray-600 mb-6">{error}</p>
           <Link 
             to="/internships" 
-            className="inline-block px-6 py-3 bg-teal-500 text-white font-medium rounded-lg hover:bg-teal-600 transition-colors duration-300"
+            className="inline-block px-6 py-3 bg-purple-500 text-white font-medium rounded-lg hover:bg-purple-600 transition-colors duration-300"
           >
             Back to Internships
           </Link>
@@ -729,19 +729,19 @@ const InternshipCertificate = () => {
             <div className="mb-8 p-4 bg-gray-50 rounded-lg">
               <div 
                 ref={certificateRef}
-                className="relative bg-white border-8 border-teal-100 rounded-lg p-8 w-full max-w-3xl mx-auto"
+                className="relative bg-white border-8 border-purple-100 rounded-lg p-8 w-full max-w-3xl mx-auto"
                 style={{ aspectRatio: '1.4/1' }}
               >
-                <div className="absolute top-0 left-0 w-full h-full border-4 border-teal-500 rounded-lg m-2 pointer-events-none"></div>
+                <div className="absolute top-0 left-0 w-full h-full border-4 border-purple-500 rounded-lg m-2 pointer-events-none"></div>
                 <div className="text-center mb-6">
-                  <h2 className="text-3xl font-bold text-teal-800 mb-1">Certificate of Completion</h2>
-                  <div className="w-40 h-1 bg-teal-500 mx-auto"></div>
+                  <h2 className="text-3xl font-bold text-purple-800 mb-1">Certificate of Completion</h2>
+                  <div className="w-40 h-1 bg-purple-500 mx-auto"></div>
                 </div>
                 <div className="text-center mb-8">
                   <p className="text-lg text-gray-600 mb-2">This is to certify that</p>
                   <h3 className="text-2xl font-bold text-gray-800 mb-2">{currentUser?.name || "User"}</h3>
                   <p className="text-lg text-gray-600">has successfully completed the internship</p>
-                  <h4 className="text-xl font-bold text-teal-700 mt-2">"{internship.title}"</h4>
+                  <h4 className="text-xl font-bold text-purple-700 mt-2">"{internship.title}"</h4>
                 </div>
                 <div className="flex justify-between items-end mt-12">
                   <div className="text-center">
@@ -765,7 +765,7 @@ const InternshipCertificate = () => {
                 <button
                   onClick={handleConnectWallet}
                   disabled={isConnectingWallet}
-                  className="px-6 py-3 bg-teal-500 text-white font-medium rounded-lg hover:bg-teal-600 transition-colors duration-300 flex items-center justify-center disabled:bg-gray-400"
+                  className="px-6 py-3 bg-purple-500 text-white font-medium rounded-lg hover:bg-purple-600 transition-colors duration-300 flex items-center justify-center disabled:bg-gray-400"
                 >
                   {isConnectingWallet ? (
                     <>
@@ -785,7 +785,7 @@ const InternshipCertificate = () => {
                 <button
                   onClick={handleMintNFT}
                   disabled={isMinting}
-                  className="px-6 py-3 bg-teal-500 text-white font-medium rounded-lg hover:bg-teal-600 transition-colors duration-300 flex items-center justify-center disabled:bg-gray-400"
+                  className="px-6 py-3 bg-purple-500 text-white font-medium rounded-lg hover:bg-purple-600 transition-colors duration-300 flex items-center justify-center disabled:bg-gray-400"
                 >
                   {isMinting ? (
                     <>

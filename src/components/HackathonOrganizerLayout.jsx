@@ -9,12 +9,12 @@ export default function HackathonOrganizerLayout() {
   return (
     <div className="flex min-h-screen">
       {/* Sidebar */}
-      <div className="w-64 bg-gradient-to-b from-teal-600 to-teal-700 p-4">
+      <div className="w-64 bg-gradient-to-b from-purple-600 to-purple-700 p-4">
         <h2 className="text-white text-2xl font-bold mb-6">Hackathon Panel</h2>
         <nav className="space-y-2">
           <Link 
             to="/organizer/dashboard" 
-            className={`block ${activeLink === 'dashboard' ? 'bg-teal-800 text-white' : 'text-teal-100 hover:bg-teal-800'} p-3 rounded-lg transition-all duration-200`}
+            className={`block ${activeLink === 'dashboard' ? 'bg-purple-800 text-white' : 'text-purple-100 hover:bg-purple-800'} p-3 rounded-lg transition-all duration-200`}
             onClick={() => setActiveLink('dashboard')}
           >
             <div className="flex items-center">
@@ -27,7 +27,7 @@ export default function HackathonOrganizerLayout() {
           
           <Link 
             to="/organizer/my-hackathons" 
-            className={`block ${activeLink === 'my-hackathons' ? 'bg-teal-800 text-white' : 'text-teal-100 hover:bg-teal-800'} p-3 rounded-lg transition-all duration-200`}
+            className={`block ${activeLink === 'my-hackathons' ? 'bg-purple-800 text-white' : 'text-purple-100 hover:bg-purple-800'} p-3 rounded-lg transition-all duration-200`}
             onClick={() => setActiveLink('my-hackathons')}
           >
             <div className="flex items-center">
@@ -40,7 +40,7 @@ export default function HackathonOrganizerLayout() {
           
           <Link 
             to="/organizer/participants" 
-            className={`block ${activeLink === 'participants' ? 'bg-teal-800 text-white' : 'text-teal-100 hover:bg-teal-800'} p-3 rounded-lg transition-all duration-200`}
+            className={`block ${activeLink === 'participants' ? 'bg-purple-800 text-white' : 'text-purple-100 hover:bg-purple-800'} p-3 rounded-lg transition-all duration-200`}
             onClick={() => setActiveLink('participants')}
           >
             <div className="flex items-center">
@@ -53,7 +53,7 @@ export default function HackathonOrganizerLayout() {
           
           <Link 
             to="/organizer/submissions" 
-            className={`block ${activeLink === 'submissions' ? 'bg-teal-800 text-white' : 'text-teal-100 hover:bg-teal-800'} p-3 rounded-lg transition-all duration-200`}
+            className={`block ${activeLink === 'submissions' ? 'bg-purple-800 text-white' : 'text-purple-100 hover:bg-purple-800'} p-3 rounded-lg transition-all duration-200`}
             onClick={() => setActiveLink('submissions')}
           >
             <div className="flex items-center">
@@ -66,7 +66,7 @@ export default function HackathonOrganizerLayout() {
           
           <Link 
             to="/organizer/judging" 
-            className={`block ${activeLink === 'judging' ? 'bg-teal-800 text-white' : 'text-teal-100 hover:bg-teal-800'} p-3 rounded-lg transition-all duration-200`}
+            className={`block ${activeLink === 'judging' ? 'bg-purple-800 text-white' : 'text-purple-100 hover:bg-purple-800'} p-3 rounded-lg transition-all duration-200`}
             onClick={() => setActiveLink('judging')}
           >
             <div className="flex items-center">
@@ -79,7 +79,7 @@ export default function HackathonOrganizerLayout() {
         
         <Link 
           to="/organizer/certificates" 
-          className={`block ${activeLink === 'certificates' ? 'bg-teal-800 text-white' : 'text-teal-100 hover:bg-teal-800'} p-3 rounded-lg transition-all duration-200`}
+          className={`block ${activeLink === 'certificates' ? 'bg-purple-800 text-white' : 'text-purple-100 hover:bg-purple-800'} p-3 rounded-lg transition-all duration-200`}
           onClick={() => setActiveLink('certificates')}
         >
           <div className="flex items-center">
@@ -92,7 +92,7 @@ export default function HackathonOrganizerLayout() {
         
         <Link 
           to="/organizer/analytics" 
-          className={`block ${activeLink === 'analytics' ? 'bg-teal-800 text-white' : 'text-teal-100 hover:bg-teal-800'} p-3 rounded-lg transition-all duration-200`}
+          className={`block ${activeLink === 'analytics' ? 'bg-purple-800 text-white' : 'text-purple-100 hover:bg-purple-800'} p-3 rounded-lg transition-all duration-200`}
           onClick={() => setActiveLink('analytics')}
         >
           <div className="flex items-center">
@@ -107,7 +107,7 @@ export default function HackathonOrganizerLayout() {
       <div className="mt-auto pt-8">
         <Link 
           to="/hackathons/create" 
-          className="block w-full bg-white text-teal-700 hover:bg-teal-100 font-medium p-3 rounded-lg text-center transition-all duration-200"
+          className="block w-full bg-white text-purple-700 hover:bg-purple-100 font-medium p-3 rounded-lg text-center transition-all duration-200"
         >
           + Create New Hackathon
         </Link>

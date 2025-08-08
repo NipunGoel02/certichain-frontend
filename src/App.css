@@ -6,7 +6,7 @@
   }
   body {
     padding-top: 60px; /* Navbar ki height ke hisaab se adjust kar */
-    background-image: url("./image.png");
+    background-image: url("./imag.png");
   }
   .animation-delay-2000 {
   animation-delay: 2s;

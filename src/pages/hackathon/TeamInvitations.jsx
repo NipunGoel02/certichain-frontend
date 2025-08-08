@@ -82,7 +82,7 @@ const TeamInvitations = () => {
   if (loading) {
     return (
       <div className="flex justify-center items-center py-8">
-        <div className="w-8 h-8 border-4 border-teal-500 border-t-transparent rounded-full animate-spin"></div>
+        <div className="w-8 h-8 border-4 border-purple-500 border-t-transparent rounded-full animate-spin"></div>
       </div>
     );
   }
@@ -125,7 +125,7 @@ const TeamInvitations = () => {
               <button
                 onClick={() => handleAccept(invite.teamId)}
                 disabled={actionLoading[invite.teamId]}
-                className="px-4 py-2 bg-teal-600 text-white text-sm rounded-md hover:bg-teal-700 transition-colors disabled:opacity-50"
+                className="px-4 py-2 bg-purple-600 text-white text-sm rounded-md hover:bg-purple-700 transition-colors disabled:opacity-50"
               >
                 {actionLoading[invite.teamId] === 'accepting' ? 'Accepting...' : 'Accept'}
               </button>

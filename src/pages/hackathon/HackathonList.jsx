@@ -41,7 +41,14 @@ const HackathonList = () => {
           className="text-center mb-12"
         >
           <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4 mt-12">
-            <span className="bg-gradient-to-r from-primary-600 to-secondary-500 bg-clip-text text-transparent">
+           <span
+              className="bg-clip-text text-transparent"
+              style={{
+                backgroundImage: 'linear-gradient(to right, rgba(167,117,229,1), rgba(167,117,229,1))',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+              }}
+            >
               Explore Hackathons
             </span>
           </h1>
@@ -57,7 +64,7 @@ const HackathonList = () => {
             placeholder="Search for hackathons..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full px-4 py-3 pl-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 focus:outline-none"
+            className="w-full px-4 py-3 pl-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 focus:outline-none"
           />
           <svg className="w-5 h-5 text-gray-400 absolute left-3 top-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
@@ -66,7 +73,7 @@ const HackathonList = () => {
         
         <div className="relative">
           <select
-            className="appearance-none w-full md:w-64 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 focus:outline-none"
+            className="appearance-none w-full md:w-64 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 focus:outline-none"
             defaultValue="all"
           >
             <option value="all">All Categories</option>
@@ -88,7 +95,7 @@ const HackathonList = () => {
           onClick={() => setFilter('all')}
           className={`mr-2 mb-2 px-4 py-2 rounded-full transition-all duration-300 ${
             filter === 'all' 
-              ? 'bg-teal-500 text-white shadow-md' 
+              ? 'bg-purple-500 text-white shadow-md' 
               : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
           }`}
         >
@@ -98,7 +105,7 @@ const HackathonList = () => {
           onClick={() => setFilter('upcoming')}
           className={`mr-2 mb-2 px-4 py-2 rounded-full transition-all duration-300 ${
             filter === 'upcoming' 
-              ? 'bg-teal-500 text-white shadow-md' 
+              ? 'bg-purple-500 text-white shadow-md' 
               : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
           }`}
         >
@@ -108,7 +115,7 @@ const HackathonList = () => {
           onClick={() => setFilter('active')}
           className={`mr-2 mb-2 px-4 py-2 rounded-full transition-all duration-300 ${
             filter === 'active' 
-              ? 'bg-teal-500 text-white shadow-md' 
+              ? 'bg-purple-500 text-white shadow-md' 
               : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
           }`}
         >
@@ -118,7 +125,7 @@ const HackathonList = () => {
           onClick={() => setFilter('completed')}
           className={`mr-2 mb-2 px-4 py-2 rounded-full transition-all duration-300 ${
             filter === 'completed' 
-              ? 'bg-teal-500 text-white shadow-md' 
+              ? 'bg-purple-500 text-white shadow-md' 
               : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
           }`}
         >
@@ -129,13 +136,13 @@ const HackathonList = () => {
       {loading ? (
         <div className="flex justify-center items-center h-64">
           <div className="relative w-16 h-16">
-            <div className="absolute top-0 left-0 w-full h-full border-4 border-teal-200 rounded-full animate-ping"></div>
-            <div className="absolute top-0 left-0 w-full h-full border-4 border-teal-500 border-t-transparent rounded-full animate-spin"></div>
+            <div className="absolute top-0 left-0 w-full h-full border-4 border-purple-200 rounded-full animate-ping"></div>
+            <div className="absolute top-0 left-0 w-full h-full border-4 border-purple-500 border-t-transparent rounded-full animate-spin"></div>
           </div>
         </div>
       ) : filteredHackathons.length === 0 ? (
         <div className="text-center py-16 bg-white rounded-xl shadow-md">
-          <svg className="w-16 h-16 mx-auto text-teal-400 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <svg className="w-16 h-16 mx-auto text-purple-400 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
           </svg>
           <h3 className="text-xl font-semibold text-gray-700 mb-2">No hackathons found</h3>
@@ -152,7 +159,7 @@ const HackathonList = () => {
               key={hackathon._id}
               className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
             >
-              <div className="h-40 bg-gradient-to-r from-teal-500 to-teal-400 relative overflow-hidden">
+              <div className="h-40 bg-gradient-to-r from-purple-500 to-purple-400 relative overflow-hidden">
                 {hackathon.banner ? (
                   <img src={hackathon.banner} alt={hackathon.title} className="w-full h-full object-cover" />
                 ) : (
@@ -162,7 +169,7 @@ const HackathonList = () => {
                 )}
                 <div className="absolute top-4 right-4">
                   <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
-                    hackathon.status === 'active' ? 'bg-teal-100 text-teal-800' : 
+                    hackathon.status === 'active' ? 'bg-purple-100 text-purple-800' : 
                     hackathon.status === 'upcoming' ? 'bg-yellow-100 text-yellow-800' : 
                     'bg-gray-100 text-gray-800'
                   }`}>
@@ -177,14 +184,14 @@ const HackathonList = () => {
                 
                 <div className="flex flex-col space-y-2 mb-4">
                   <div className="flex items-center text-sm text-gray-500">
-                    <svg className="w-4 h-4 mr-2 text-teal-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <svg className="w-4 h-4 mr-2 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
                     </svg>
 <span>{new Date(hackathon.startDate).toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' })} - {new Date(hackathon.endDate).toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' })}</span>
                   </div>
                   
                   <div className="flex items-center text-sm text-gray-500">
-                    <svg className="w-4 h-4 mr-2 text-teal-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <svg className="w-4 h-4 mr-2 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
                     </svg>
                     <span>{hackathon.participants?.length || 0} Participants</span>
@@ -193,7 +200,7 @@ const HackathonList = () => {
                 
                 <Link
                   to={`/hackathons/${hackathon._id}`}
-                  className="block w-full text-center bg-teal-500 hover:bg-teal-600 text-white font-semibold py-2 px-4 rounded-lg transition duration-300"
+                  className="block w-full text-center bg-purple-500 hover:bg-purple-600 text-white font-semibold py-2 px-4 rounded-lg transition duration-300"
                 >
                   View Details
                 </Link>

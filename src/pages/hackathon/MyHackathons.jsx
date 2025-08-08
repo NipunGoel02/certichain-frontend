@@ -30,7 +30,7 @@ const MyHackathons = () => {
   if (loading) {
     return (
       <div className="flex justify-center items-center h-64">
-        <div className="w-12 h-12 border-4 border-teal-500 border-t-transparent rounded-full animate-spin"></div>
+        <div className="w-12 h-12 border-4 border-purple-500 border-t-transparent rounded-full animate-spin"></div>
       </div>
     );
   }
@@ -55,7 +55,7 @@ const MyHackathons = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {hackathons.map(hackathon => (
           <div key={hackathon._id} className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-            <div className="h-40 bg-gradient-to-r from-teal-500 to-teal-400 relative overflow-hidden">
+            <div className="h-40 bg-gradient-to-r from-purple-500 to-purple-400 relative overflow-hidden">
               {hackathon.banner ? (
                 <img src={hackathon.banner} alt={hackathon.title} className="w-full h-full object-cover" />
               ) : (
@@ -65,7 +65,7 @@ const MyHackathons = () => {
               )}
               <div className="absolute top-4 right-4">
                 <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
-                  hackathon.status === 'active' ? 'bg-teal-100 text-teal-800' : 
+                  hackathon.status === 'active' ? 'bg-purple-100 text-purple-800' : 
                   hackathon.status === 'upcoming' ? 'bg-yellow-100 text-yellow-800' : 
                   'bg-gray-100 text-gray-800'
                 }`}>
@@ -78,7 +78,7 @@ const MyHackathons = () => {
               <p className="text-gray-600 mb-4 line-clamp-2">{hackathon.description}</p>
               <Link
                 to={`/hackathons/${hackathon._id}`}
-                className="block w-full text-center bg-teal-500 hover:bg-teal-600 text-white font-semibold py-2 px-4 rounded-lg transition duration-300"
+                className="block w-full text-center bg-purple-500 hover:bg-purple-600 text-white font-semibold py-2 px-4 rounded-lg transition duration-300"
               >
                 View Details
               </Link>

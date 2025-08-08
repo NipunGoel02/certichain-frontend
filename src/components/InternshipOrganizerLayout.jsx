@@ -9,12 +9,12 @@ export default function InternshipOrganizerLayout() {
   return (
     <div className="flex min-h-screen">
       {/* Sidebar */}
-      <div className="w-64 bg-gradient-to-b from-teal-600 to-teal-700 p-4">
+      <div className="w-64 bg-gradient-to-b from-purple-600 to-purple-700 p-4">
         <h2 className="text-white text-2xl font-bold mb-6">Internship Panel</h2>
         <nav className="space-y-2">
           <Link 
             to="/internships/my-internships" 
-            className={`block ${activeLink === 'my-internships' ? 'bg-teal-800 text-white' : 'text-teal-100 hover:bg-teal-800'} p-3 rounded-lg transition-all duration-200`}
+            className={`block ${activeLink === 'my-internships' ? 'bg-purple-800 text-white' : 'text-purple-100 hover:bg-purple-800'} p-3 rounded-lg transition-all duration-200`}
             onClick={() => setActiveLink('my-internships')}
           >
             <div className="flex items-center">
@@ -27,7 +27,7 @@ export default function InternshipOrganizerLayout() {
           
           <Link 
             to="/internships/create" 
-            className={`block ${activeLink === 'create' ? 'bg-teal-800 text-white' : 'text-teal-100 hover:bg-teal-800'} p-3 rounded-lg transition-all duration-200`}
+            className={`block ${activeLink === 'create' ? 'bg-purple-800 text-white' : 'text-purple-100 hover:bg-purple-800'} p-3 rounded-lg transition-all duration-200`}
             onClick={() => setActiveLink('create')}
           >
             <div className="flex items-center">
@@ -42,7 +42,7 @@ export default function InternshipOrganizerLayout() {
         <div className="mt-auto pt-8">
           <Link 
             to="/internships/create" 
-            className="block w-full bg-white text-teal-700 hover:bg-teal-100 font-medium p-3 rounded-lg text-center transition-all duration-200"
+            className="block w-full bg-white text-purple-700 hover:bg-purple-100 font-medium p-3 rounded-lg text-center transition-all duration-200"
           >
             + Create New Internship
           </Link>

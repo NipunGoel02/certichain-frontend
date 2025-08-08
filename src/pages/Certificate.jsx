@@ -745,7 +745,7 @@ const Certificate = () => {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center pt-20">
         <div className="text-center">
-          <div className="w-16 h-16 border-4 border-teal-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+          <div className="w-16 h-16 border-4 border-purple-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
           <p className="text-gray-600">Loading certificate...</p>
         </div>
       </div>
@@ -763,7 +763,7 @@ const Certificate = () => {
           <p className="text-gray-600 mb-6">{error}</p>
           <Link 
             to="/courses" 
-            className="inline-block px-6 py-3 bg-teal-500 text-white font-medium rounded-lg hover:bg-teal-600 transition-colors duration-300"
+            className="inline-block px-6 py-3 bg-purple-500 text-white font-medium rounded-lg hover:bg-purple-600 transition-colors duration-300"
           >
             Back to Courses
           </Link>
@@ -787,21 +787,21 @@ const Certificate = () => {
             <div className="mb-8 p-4 bg-gray-50 rounded-lg">
               <div 
                 ref={certificateRef}
-                className="relative bg-white border-8 border-teal-100 rounded-lg p-8 w-full max-w-3xl mx-auto"
+                className="relative bg-white border-8 border-purple-100 rounded-lg p-8 w-full max-w-3xl mx-auto"
                 style={{ aspectRatio: '1.4/1' }}
               >
-                <div className="absolute top-0 left-0 w-full h-full border-4 border-teal-500 rounded-lg m-2 pointer-events-none"></div>
+                <div className="absolute top-0 left-0 w-full h-full border-4 border-purple-500 rounded-lg m-2 pointer-events-none"></div>
                 
                 <div className="text-center mb-6">
-                  <h2 className="text-3xl font-bold text-teal-800 mb-1">Certificate of Completion</h2>
-                  <div className="w-40 h-1 bg-teal-500 mx-auto"></div>
+                  <h2 className="text-3xl font-bold text-purple-800 mb-1">Certificate of Completion</h2>
+                  <div className="w-40 h-1 bg-purple-500 mx-auto"></div>
                 </div>
                 
                 <div className="text-center mb-8">
                   <p className="text-lg text-gray-600 mb-2">This is to certify that</p>
                   <h3 className="text-2xl font-bold text-gray-800 mb-2">{currentUser?.name || "User"}</h3>
                   <p className="text-lg text-gray-600">has successfully completed the course</p>
-                  <h4 className="text-xl font-bold text-teal-700 mt-2">"{course.title}"</h4>
+                  <h4 className="text-xl font-bold text-purple-700 mt-2">"{course.title}"</h4>
                 </div>
                 
                 <div className="flex justify-between items-end mt-12">
@@ -837,7 +837,7 @@ const Certificate = () => {
                 <button
                   onClick={handleConnectWallet}
                   disabled={isConnectingWallet}
-                  className="px-6 py-3 bg-teal-500 text-white font-medium rounded-lg hover:bg-teal-600 transition-colors duration-300 flex items-center justify-center disabled:bg-gray-400"
+                  className="px-6 py-3 bg-purple-500 text-white font-medium rounded-lg hover:bg-purple-600 transition-colors duration-300 flex items-center justify-center disabled:bg-gray-400"
                 >
                   {isConnectingWallet ? (
                     <>
@@ -857,7 +857,7 @@ const Certificate = () => {
                 <button
                   onClick={handleMintNFT}
                   disabled={isMinting}
-                  className="px-6 py-3 bg-teal-500 text-white font-medium rounded-lg hover:bg-teal-600 transition-colors duration-300 flex items-center justify-center disabled:bg-gray-400"
+                  className="px-6 py-3 bg-purple-500 text-white font-medium rounded-lg hover:bg-purple-600 transition-colors duration-300 flex items-center justify-center disabled:bg-gray-400"
                 >
                   {isMinting ? (
                     <>
@@ -900,7 +900,7 @@ const Certificate = () => {
                 <div>
                   <h3 className="text-sm font-medium text-gray-500 mb-1">Connected Wallet</h3>
                   <div className="flex items-center">
-                    <div className="bg-teal-100 text-teal-800 rounded-full w-8 h-8 flex items-center justify-center mr-2">
+                    <div className="bg-purple-100 text-purple-800 rounded-full w-8 h-8 flex items-center justify-center mr-2">
                       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
                       </svg>
@@ -918,7 +918,7 @@ const Certificate = () => {
                           href={`https://sepolia.etherscan.io/tx/${transactionHash}`}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-teal-600 hover:text-teal-700 transition-colors duration-300"
+                          className="text-purple-600 hover:text-purple-700 transition-colors duration-300"
                         >
                           {`${transactionHash.substring(0, 10)}...${transactionHash.substring(transactionHash.length - 10)}`}
                           <svg className="w-4 h-4 inline-block ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -944,16 +944,16 @@ const Certificate = () => {
                       </p>
                     </div>
                     
-                    <div className="mt-6 p-4 bg-teal-50 rounded-lg border border-teal-100">
-                      <h3 className="font-medium text-teal-800 mb-2">NFT Added to Your Wallet</h3>
+                    <div className="mt-6 p-4 bg-purple-50 rounded-lg border border-purple-100">
+                      <h3 className="font-medium text-purple-800 mb-2">NFT Added to Your Wallet</h3>
                       <p className="text-gray-600 mb-4">
                         Your NFT certificate has been added to your wallet. You can view it in your wallet's NFT collection.
                       </p>
                       <div className="flex items-center">
-                        <svg className="w-5 h-5 text-teal-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <svg className="w-5 h-5 text-purple-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                         </svg>
-                        <span className="text-sm text-teal-600">
+                        <span className="text-sm text-purple-600">
                           To view in MetaMask: Open MetaMask → NFTs tab → Your certificate should appear there
                         </span>
                       </div>

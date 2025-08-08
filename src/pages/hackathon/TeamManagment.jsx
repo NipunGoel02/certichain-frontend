@@ -171,7 +171,7 @@ const TeamManagement = () => {
   if (loading) {
     return (
       <div className="flex justify-center items-center h-64">
-        <div className="w-12 h-12 border-4 border-teal-500 border-t-transparent rounded-full animate-spin"></div>
+        <div className="w-12 h-12 border-4 border-purple-500 border-t-transparent rounded-full animate-spin"></div>
       </div>
     );
   }
@@ -187,7 +187,7 @@ const TeamManagement = () => {
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="mb-8">
-        <Link to={`/hackathons/${id}`} className="text-teal-600 hover:text-teal-800 flex items-center">
+        <Link to={`/hackathons/${id}`} className="text-purple-600 hover:text-purple-800 flex items-center">
           <svg className="w-5 h-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
           </svg>
@@ -203,8 +203,8 @@ const TeamManagement = () => {
       {team ? (
         <div className="bg-white rounded-xl shadow-md p-6">
           <div className="flex justify-between items-center mb-6">
-            <h3 className="text-2xl font-bold text-teal-700">{team.name}</h3>
-            <span className="bg-teal-100 text-teal-800 text-sm px-3 py-1 rounded-full">
+            <h3 className="text-2xl font-bold text-purple-700">{team.name}</h3>
+            <span className="bg-purple-100 text-purple-800 text-sm px-3 py-1 rounded-full">
               {team.members.length} / {hackathon?.maxTeamSize || '?'} Members
             </span>
           </div>
@@ -215,7 +215,7 @@ const TeamManagement = () => {
               {team.members.map(member => (
                 <div key={member._id} className="flex items-center justify-between bg-gray-50 p-3 rounded-lg">
                   <div className="flex items-center">
-                    <div className="w-10 h-10 rounded-full bg-teal-100 flex items-center justify-center text-teal-700 font-bold mr-3">
+                    <div className="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center text-purple-700 font-bold mr-3">
                       {member.name?.charAt(0).toUpperCase() || 'U'}
                     </div>
                     <div>
@@ -225,7 +225,7 @@ const TeamManagement = () => {
                   </div>
                   
                   {member._id === team.leader._id ? (
-                    <span className="bg-teal-100 text-teal-800 text-xs px-2 py-1 rounded-full">Team Leader</span>
+                    <span className="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full">Team Leader</span>
                   ) : (
                     <button 
                       onClick={() => removeMember(member._id)}
@@ -250,12 +250,12 @@ const TeamManagement = () => {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Enter email address"
-                  className="flex-grow px-4 py-2 border rounded-l-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
+                  className="flex-grow px-4 py-2 border rounded-l-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
                   required
                 />
                 <button
                   type="submit"
-                  className="bg-teal-600 hover:bg-teal-700 text-white px-4 py-2 rounded-r-lg"
+                  className="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-r-lg"
                   disabled={inviteLoading}
                 >
                   {inviteLoading ? 'Sending...' : 'Invite'}
@@ -282,7 +282,7 @@ const TeamManagement = () => {
         <>
           {invitations.length > 0 && (
             <div className="bg-white rounded-xl shadow-md p-6 mb-6">
-              <h3 className="text-2xl font-bold text-teal-700 mb-4">Pending Invitations</h3>
+              <h3 className="text-2xl font-bold text-purple-700 mb-4">Pending Invitations</h3>
               {invitationError && (
                 <div className="bg-red-100 text-red-700 p-2 rounded mb-4">{invitationError}</div>
               )}
@@ -300,7 +300,7 @@ const TeamManagement = () => {
                       <button
                         onClick={() => acceptInvitation(invite.teamId)}
                         disabled={invitationActionLoading}
-                        className="bg-teal-600 hover:bg-teal-700 text-white px-4 py-2 rounded"
+                        className="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded"
                       >
                         {invitationActionLoading ? 'Processing...' : 'Accept'}
                       </button>
@@ -334,14 +334,14 @@ const TeamManagement = () => {
                     type="text"
                     id="teamName"
                     name="teamName"
-                    className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
+                    className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
                     placeholder="Enter team name"
                     required
                   />
                 </div>
                 <button
                   type="submit"
-                  className="w-full bg-teal-600 hover:bg-teal-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-300"
+                  className="w-full bg-purple-600 hover:bg-purple-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-300"
                 >
                   Create Team
                 </button>
