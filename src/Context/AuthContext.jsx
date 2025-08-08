@@ -6,6 +6,9 @@ export function useAuth() {
   return useContext(AuthContext);
 }
 
+// Backend base URL — prefer .env value, fallback to localhost
+const API_BASE_URL = import.meta.env.VITE_BACKEND_URL || "http://localhost:5000";
+
 export function AuthProvider({ children }) {
   const [currentUser, setCurrentUser] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -15,7 +18,7 @@ export function AuthProvider({ children }) {
 
   // Signup function with role parameter
   async function signup(email, password, name, role = 'user') {
-    const res = await fetch('http://localhost:5000/api/auth/signup', {
+    const res = await fetch(`${API_BASE_URL}/api/auth/signup`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ name, email, password, role }),
@@ -31,7 +34,7 @@ export function AuthProvider({ children }) {
 
   // Login function
   async function login(email, password) {
-    const res = await fetch('http://localhost:5000/api/auth/login', {
+    const res = await fetch(`${API_BASE_URL}/api/auth/login`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ email, password }),
@@ -54,7 +57,7 @@ export function AuthProvider({ children }) {
 
   // Fetch user profile
   async function fetchUserProfile(token) {
-    const res = await fetch('http://localhost:5000/api/auth/profile', {
+    const res = await fetch(`${API_BASE_URL}/api/auth/profile`, {
       headers: { Authorization: `Bearer ${token}` },
     });
     if (res.ok) {
@@ -91,7 +94,7 @@ export function AuthProvider({ children }) {
     login,
     logout,
     fetchUserProfile,
-    isAdmin, // Add isAdmin helper function
+    isAdmin,
   };
 
   return (

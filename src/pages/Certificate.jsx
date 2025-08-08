@@ -12,6 +12,7 @@ import { useAuth } from '../Context/AuthContext';
 const PINATA_API_KEY = '073a6be7ca3053e2f986';
 const PINATA_API_SECRET = 'e124cf0ef9fdfb9e9409e69e058bcb129320abdc68c0aab97972a8dd9e4d2c4a';
 
+const API_BASE_URL = import.meta.env.VITE_BACKEND_URL || "http://localhost:5000";
 
 
 // Image ko IPFS pe upload karne ka function
@@ -69,7 +70,7 @@ const Certificate = () => {
   useEffect(() => {
     const fetchCourse = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/api/courses/${courseId}`);
+        const response = await axios.get(`${API_BASE_URL}/api/courses/${courseId}`);
         setCourse(response.data);
         setLoading(false);
       } catch (err) {
@@ -132,7 +133,7 @@ const Certificate = () => {
         // Save wallet address to backend
         const token = localStorage.getItem('token');
         console.log('Saving wallet address with token:', token);
-        await axios.patch('http://localhost:5000/api/auth/wallet', { walletAddress: address }, {
+        await axios.patch(`${API_BASE_URL}/api/auth/wallet`, { walletAddress: address }, {
           headers: {
             Authorization: `Bearer ${token}`
           }

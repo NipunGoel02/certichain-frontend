@@ -4,6 +4,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
 
 export default function CourseForm() {
+  const API_BASE_URL = import.meta.env.VITE_BACKEND_URL || "http://localhost:5000";
   const { id } = useParams();
   const navigate = useNavigate();
   const [step, setStep] = useState(1);
@@ -196,14 +197,14 @@ export default function CourseForm() {
         },
       };
       if (id) {
-        await axios.put(`http://localhost:5000/api/courses/admin/courses/${id}`, course, config);
+        await axios.put( `${API_BASE_URL}/api/courses/admin/courses/${id}`, course, config);
       } else {
-        await axios.post('http://localhost:5000/api/courses/admin/courses', course, config);
+        await axios.post(`${API_BASE_URL}/api/courses/admin/courses`, course, config);
       }
       alert('Course saved successfully!');
       navigate('/courses');
     } catch (error) {
-      console.error('Error saving course:', error);
+      console.error('Error saving course:', error); 
       alert('Failed to save course.');
     }
   };
@@ -337,7 +338,7 @@ export default function CourseForm() {
                             }
                             const data = await response.json();
                             // Prepend backend base URL to image URL
-                            const backendBaseUrl = 'http://localhost:5000';
+                            const backendBaseUrl = import.meta.env.VITE_BACKEND_URL || "http://localhost:5000";
                             const fullUrl = data.url.startsWith('http') ? data.url : backendBaseUrl + data.url;
                             setCourse((prev) => ({ ...prev, thumbnail: fullUrl }));
                           } catch (error) {
@@ -533,7 +534,7 @@ export default function CourseForm() {
                             }
                             const data = await response.json();
                             // Prepend backend base URL to image URL
-                            const backendBaseUrl = 'http://localhost:5000';
+                            const backendBaseUrl =  import.meta.env.VITE_BACKEND_URL || "http://localhost:5000";
                             const fullUrl = data.url.startsWith('http') ? data.url : backendBaseUrl + data.url;
                             setCourse((prev) => ({
                               ...prev,

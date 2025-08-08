@@ -4,6 +4,8 @@ import axios from 'axios';
 import { motion } from 'framer-motion';
 
 const Quiz = () => {
+  const API_BASE_URL = import.meta.env.VITE_BACKEND_URL || "http://localhost:5000";
+
   const { courseId } = useParams();
   const navigate = useNavigate();
   const [questions, setQuestions] = useState([]);
@@ -47,11 +49,14 @@ const Quiz = () => {
     const fetchQuizQuestions = async () => {
       try {
         const token = localStorage.getItem('token');
-        const response = await axios.get(`http://localhost:5000/api/courses/${courseId}`, {
-          headers: {
-            Authorization: `Bearer ${token}`
-          }
-        });
+        const response = await axios.get(
+  `${API_BASE_URL}/api/courses/${courseId}`,
+  {
+    headers: {
+      Authorization: `Bearer ${token}`
+    }
+  }
+);
         if (response.data.quizQuestions && response.data.quizQuestions.length > 0) {
           setQuestions(response.data.quizQuestions);
           setAnswers(new Array(response.data.quizQuestions.length).fill(null));

@@ -48,7 +48,8 @@ const handleProfileImageChange = async (e) => {
         }
       });
         if (response.data && response.data.profilePicture) {
-          const backendBaseUrl = 'http://localhost:5000';
+          const backendBaseUrl = import.meta.env.VITE_BACKEND_URL || "http://localhost:5000";
+
           let fullUrl = response.data.profilePicture.startsWith('http') ? response.data.profilePicture : backendBaseUrl + response.data.profilePicture;
           // Append timestamp to bust cache
           fullUrl += `?t=${new Date().getTime()}`;
@@ -105,7 +106,8 @@ const handleProfileImageChange = async (e) => {
             headers: { Authorization: `Bearer ${token}` }
           });
           if (response.data && response.data.profilePicture) {
-            const backendBaseUrl = 'http://localhost:5000';
+            const backendBaseUrl = import.meta.env.VITE_BACKEND_URL || "http://localhost:5000";
+
             let fullUrl = response.data.profilePicture.startsWith('http') ? response.data.profilePicture : backendBaseUrl + response.data.profilePicture;
             // Append timestamp to bust cache
             fullUrl += `?t=${new Date().getTime()}`;
@@ -132,7 +134,8 @@ const handleProfileImageChange = async (e) => {
         headers: { Authorization: `Bearer ${token}` }
       });
         if (res.data && res.data.profilePicture) {
-          const backendBaseUrl = 'http://localhost:5000';
+          const backendBaseUrl = import.meta.env.VITE_BACKEND_URL || "http://localhost:5000";
+
           let fullUrl = res.data.profilePicture.startsWith('http') ? res.data.profilePicture : backendBaseUrl + res.data.profilePicture;
           // Append timestamp to bust cache
           fullUrl += `?t=${new Date().getTime()}`;
